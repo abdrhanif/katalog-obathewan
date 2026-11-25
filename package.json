@@ -1,0 +1,16 @@
+{
+  "name": "katalog-obathewan",
+  "version": "1.0.0",
+  "description": "A comprehensive, clinical-grade veterinary pharmacology reference and prescription management application for veterinary practitioners.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scrape:plumbs": "node scripts/scrape-plumbs-handbook.cjs",
+    "scrape:plumbs:diag": "node scripts/scrape-plumbs-handbook.cjs --diag"
+  },
+  "keywords": [],
+  "type": "module",
+  "dependencies": {
+    "@iamtraction/google-translate": "^3.0.0"
+  }
+}

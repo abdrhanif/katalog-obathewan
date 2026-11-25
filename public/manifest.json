@@ -1,0 +1,36 @@
+{
+  "name": "Katalog & Kalkulator Obat Hewan",
+  "short_name": "Katalog Obat",
+  "description": "Veterinary Pharmacology, Clinical Dosage Calculator & Prescription System (Bisa Digunakan Offline Penuh)",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f8fafc",
+  "theme_color": "#0d9488",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["medical", "education", "utilities"],
+  "shortcuts": [
+    {
+      "name": "Kalkulator Dosis",
+      "short_name": "Kalkulator",
+      "description": "Buka kalkulator dosis obat hewan",
+      "url": "./index.html#kalkulator",
+      "icons": [{ "src": "icon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Katalog Obat",
+      "short_name": "Katalog",
+      "description": "Buka direktori 433+ monograf obat",
+      "url": "./index.html#katalog",
+      "icons": [{ "src": "icon.svg", "sizes": "any" }]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="vetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Rounded App Tile -->
+  <rect width="512" height="512" rx="112" fill="url(#vetGrad)"/>
+  
+  <!-- Subtle Medical Cross Silhouette -->
+  <path d="M216 110 h80 v90 h90 v80 h-90 v122 h-80 v-122 h-90 v-80 h90 z" fill="#ffffff" fill-opacity="0.18"/>
+  
+  <!-- Stylized Veterinary Paw & Rx Emblem -->
+  <!-- Top Pads -->
+  <circle cx="190" cy="185" r="32" fill="#ffffff"/>
+  <circle cx="322" cy="185" r="32" fill="#ffffff"/>
+  <circle cx="132" cy="265" r="28" fill="#ffffff"/>
+  <circle cx="380" cy="265" r="28" fill="#ffffff"/>
+  
+  <!-- Main Paw Pad -->
+  <path d="M256 260 c-55 0 -85 45 -85 85 c0 35 25 65 65 65 c12 0 16 -8 20 -8 s8 8 20 8 c40 0 65 -30 65 -65 c0 -40 -30 -85 -85 -85 z" fill="#ffffff"/>
+
+  <!-- Small Rx Badge at Bottom Right -->
+  <circle cx="410" cy="410" r="64" fill="#14b8a6" stroke="#ffffff" stroke-width="8"/>
+  <text x="410" y="426" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="44" font-weight="900" fill="#ffffff" text-anchor="middle">Rx</text>
+</svg>

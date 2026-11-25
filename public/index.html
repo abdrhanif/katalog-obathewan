@@ -1,0 +1,2589 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Obat Hewan - Veterinary Pharmacology & Prescription System</title>
+  <!-- Fonts: Plus Jakarta Sans / Google Sans (primary), Inter (complementary 1), Roboto (complementary 2) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,300..800;1,14..32,300..800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '"Google Sans"', 'Inter', 'Roboto', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            inter: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            roboto: ['Roboto', 'Arial', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- PWA & Mobile Web App Meta (Offline Support) -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0d9488">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Katalog Obat">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="apple-touch-icon" href="icon.svg">
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col font-sans">
+
+  <!-- ============================================================= -->
+  <!-- LANDING PAGE ROOT                                             -->
+  <!-- ============================================================= -->
+    <!-- ============================================================= -->
+  <!-- ============================================================= -->
+  <!-- STREAMLINED LANDING PAGE (AKSES TERBUKA - TANPA LOGIN)        -->
+  <!-- ============================================================= -->
+  <div id="landing-page-root" class="min-h-screen flex flex-col bg-slate-50 text-slate-800">
+
+    <!-- 1. HEADER NAV -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
+        <!-- Brand Logo -->
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-teal-600 text-white flex items-center justify-center shadow-md">
+            <i class="ph-bold ph-paw-print text-2xl"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="font-extrabold text-slate-900 text-lg tracking-tight">Katalog Obat Hewan</span>
+              <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">Akses Terbuka</span>
+            </div>
+            <p class="text-xs text-slate-500 hidden sm:block">Veterinary Pharmacology &amp; Prescription System</p>
+          </div>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="flex items-center gap-2.5">
+          <a 
+            href="https://wa.me/6289654043714?text=Halo%20Developer%20Katalog%20Obat%20Hewan,%20saya%20tertarik%20dengan%20aplikasi%20ini%20dan%20ingin%20berdiskusi..." 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="px-3.5 py-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold text-xs flex items-center gap-1.5 border border-emerald-200 transition shadow-xs"
+            title="Hubungi Pengembang di WhatsApp (+62 896 5404 3714)"
+          >
+            <i class="ph-bold ph-whatsapp-logo text-base text-emerald-600"></i>
+            <span class="hidden sm:inline">WhatsApp</span>
+          </a>
+
+          <!-- Direct Open App Button (No Login) -->
+          <button 
+            type="button" 
+            class="btn-open-app-direct px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs sm:text-sm flex items-center gap-2 transition shadow-md shadow-teal-600/20 hover:-translate-y-0.5"
+          >
+            <span>Buka Aplikasi</span>
+            <i class="ph-bold ph-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="relative overflow-hidden pt-12 pb-16 lg:pt-16 lg:pb-20 bg-gradient-to-b from-teal-50/70 via-white to-slate-50 border-b border-slate-200/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
+        
+        <!-- Badges Pill -->
+        <div class="inline-flex flex-wrap items-center justify-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-100/80 border border-teal-200 text-teal-900 text-xs font-bold tracking-wide shadow-xs">
+          <span>🐾 Komputasi Farmakologi Veteriner</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-teal-600"></span>
+          <span>BSAVA 10e &amp; Plumb's 7e</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+          <span>🇮🇩 Formularium Indonesia (434 INN)</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight max-w-4xl mx-auto">
+          Presisi Dosis Pasien Hewan, Standarisasi Resep, dan Keamanan Terapi Klinis
+        </h1>
+
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          Platform referensi klinis lengkap untuk dokter hewan praktisi, koas, dan paramedis veteriner. Dilengkapi kalkulator dosis otomatis per kgBB, meja peracikan pulveres/kapsul (d.t.d.), dan generator e-resep resmi.
+        </p>
+
+        <!-- Direct Launch Buttons -->
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <button 
+            type="button" 
+            class="btn-open-app-direct w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-teal-600 hover:bg-teal-700 text-white font-black text-sm sm:text-base flex items-center justify-center gap-2.5 transition shadow-lg shadow-teal-600/30 hover:-translate-y-0.5"
+          >
+            <i class="ph-bold ph-rocket-launch text-lg"></i>
+            <span>Mulai Gunakan Aplikasi (Gratis &amp; Terbuka)</span>
+          </button>
+          
+          <a 
+            href="https://wa.me/6289654043714?text=Halo%20Developer%20Katalog%20Obat%20Hewan,%20saya%20ingin%20berdiskusi..." 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-white hover:bg-slate-50 text-slate-700 font-bold text-sm sm:text-base flex items-center justify-center gap-2 border border-slate-300 transition shadow-xs"
+          >
+            <i class="ph-bold ph-whatsapp-logo text-emerald-600 text-lg"></i>
+            <span>Hubungi Pengembang</span>
+          </a>
+        </div>
+
+        <!-- Metric Badges Row -->
+        <div class="pt-8 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto text-left">
+          <div class="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-xs">
+            <span class="text-2xl font-black text-teal-700 block">816+</span>
+            <span class="text-xs font-bold text-slate-800 block">Monograf Internasional</span>
+            <span class="text-[11px] text-slate-500">BSAVA 10e &amp; Plumb's 7e</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-xs">
+            <span class="text-2xl font-black text-rose-600 block">434 INN</span>
+            <span class="text-xs font-bold text-slate-800 block">Obat Hewan Indonesia</span>
+            <span class="text-[11px] text-slate-500">Pedoman EBVM &amp; BPOM</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-xs">
+            <span class="text-2xl font-black text-amber-600 block">Multi-Spesies</span>
+            <span class="text-xs font-bold text-slate-800 block">Kalkulator Dosis Presisi</span>
+            <span class="text-[11px] text-slate-500">Anjing, Kucing, Kuda, Ternak</span>
+          </div>
+          <div class="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-xs">
+            <span class="text-2xl font-black text-emerald-600 block">Siap Cetak</span>
+            <span class="text-xs font-bold text-slate-800 block">Generator Resep R/</span>
+            <span class="text-[11px] text-slate-500">Aturan Latin &amp; d.t.d. Kapsul</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. FUNCTIONAL FEATURE LAUNCHPAD (JUMP DIRECTLY TO ANY TOOL) -->
+    <section class="py-12 lg:py-16 bg-white border-b border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        
+        <div class="text-center space-y-2 max-w-2xl mx-auto">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+            Modul Klinis yang Dapat Langsung Digunakan
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-500">
+            Pilih modul di bawah ini untuk langsung masuk ke alat yang Anda butuhkan tanpa perlu login.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- Card 1: Katalog Internasional -->
+          <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200 flex flex-col justify-between hover:border-teal-400 hover:shadow-md transition">
+            <div class="space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center text-xl font-bold">
+                <i class="ph-bold ph-pill"></i>
+              </div>
+              <h3 class="font-bold text-slate-900 text-base">Katalog Obat Plumb's &amp; BSAVA</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                816 monograf lengkap dengan mekanisme aksi, indikasi, kontraindikasi, efek samping, dan interaksi obat.
+              </p>
+            </div>
+            <button 
+              type="button" 
+              class="btn-launch-tab mt-4 w-full py-2.5 px-3 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 transition"
+              data-tab="nav-catalog"
+            >
+              <span>Buka Katalog Obat</span>
+              <i class="ph-bold ph-arrow-right"></i>
+            </button>
+          </div>
+
+          <!-- Card 2: Obat Hewan Indonesia -->
+          <div class="bg-rose-50/50 rounded-2xl p-5 border border-rose-200 flex flex-col justify-between hover:border-rose-400 hover:shadow-md transition">
+            <div class="space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center text-xl font-bold">
+                <span>🇮🇩</span>
+              </div>
+              <h3 class="font-bold text-slate-900 text-base">Obat Hewan Indonesia</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                434 sediaan INN, pedoman residu ternak pangan (One Health), dan pengawasan khusus BPOM (Prekursor &amp; OOT).
+              </p>
+            </div>
+            <button 
+              type="button" 
+              class="btn-launch-tab mt-4 w-full py-2.5 px-3 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 transition"
+              data-tab="nav-indo"
+            >
+              <span>Buka Formularium RI</span>
+              <i class="ph-bold ph-arrow-right"></i>
+            </button>
+          </div>
+
+          <!-- Card 3: Kalkulator Dosis -->
+          <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200 flex flex-col justify-between hover:border-teal-400 hover:shadow-md transition">
+            <div class="space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl font-bold">
+                <i class="ph-bold ph-calculator"></i>
+              </div>
+              <h3 class="font-bold text-slate-900 text-base">Kalkulator Dosis &amp; Puyer</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Konversi otomatis mg/kg ke volume mL atau fraksi tablet, meja racikan d.t.d., serta batas dosis aman hewan.
+              </p>
+            </div>
+            <button 
+              type="button" 
+              class="btn-launch-tab mt-4 w-full py-2.5 px-3 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 transition"
+              data-tab="nav-calculator"
+            >
+              <span>Buka Kalkulator Dosis</span>
+              <i class="ph-bold ph-arrow-right"></i>
+            </button>
+          </div>
+
+          <!-- Card 4: Resep Veteriner -->
+          <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200 flex flex-col justify-between hover:border-teal-400 hover:shadow-md transition">
+            <div class="space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-xl font-bold">
+                <i class="ph-bold ph-receipt"></i>
+              </div>
+              <h3 class="font-bold text-slate-900 text-base">Generator Resep Veteriner</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Algoritma resep standar R/, aturan pakai Latin terstandar, glosarium singkatan, serta fitur cetak lembar resep ber-SIP.
+              </p>
+            </div>
+            <button 
+              type="button" 
+              class="btn-launch-tab mt-4 w-full py-2.5 px-3 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 transition"
+              data-tab="nav-rx"
+            >
+              <span>Buka E-Resep</span>
+              <i class="ph-bold ph-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-10 border-t border-slate-800 text-xs mt-auto">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-xl bg-teal-600 text-white flex items-center justify-center">
+              <i class="ph-bold ph-paw-print text-xl"></i>
+            </div>
+            <div>
+              <span class="font-bold text-white text-sm">Katalog Obat Hewan</span>
+              <p class="text-[11px] text-slate-500">Platform Formularium &amp; Komputasi Klinis Dokter Hewan</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 text-xs">
+            <button type="button" class="btn-open-app-direct text-teal-400 hover:text-teal-300 font-bold transition">
+              Buka Aplikasi &rarr;
+            </button>
+            <a 
+              href="https://wa.me/6289654043714" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1"
+            >
+              <i class="ph-bold ph-whatsapp-logo"></i> WhatsApp Pengembang
+            </a>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-800/80 text-[11px] text-slate-500 space-y-1">
+          <p>
+            <b>Disclaimer Medis Veteriner:</b> Dikembangkan sebagai alat bantu komputasi klinis dan referensi ilmiah bagi dokter hewan berizin praktik (SIP/SNT) serta paramedis terakreditasi. Keputusan terapeutik akhir selalu berada di tangan dokter hewan pemeriksa.
+          </p>
+          <p>&copy; 2026 Katalog Obat Hewan. Akses terbuka untuk komunitas kedokteran hewan Indonesia.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <!-- /LANDING PAGE ROOT -->
+  <!-- ============================================================= -->
+  <div id="app-root" class="min-h-screen flex flex-col hidden">
+
+  <!-- TOP NAVIGATION HEADER (MOBILE OPTIMIZED) -->
+  <header class="bg-teal-800 text-white shadow-md sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 sm:py-3.5 flex flex-col md:flex-row md:items-center md:justify-between gap-2 sm:gap-4">
+      
+      <!-- Top Row: Brand & Mobile Quick Actions -->
+      <div class="flex items-center justify-between gap-2">
+        <div class="flex items-center space-x-2.5 min-w-0">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-teal-600 flex items-center justify-center text-white shadow-inner shrink-0">
+            <i class="ph-bold ph-paw-print text-xl sm:text-2xl"></i>
+          </div>
+          <div class="min-w-0 truncate">
+            <h1 class="text-base sm:text-xl font-bold tracking-tight truncate">Katalog Obat Hewan</h1>
+            <p class="text-[10px] sm:text-xs text-teal-200 hidden sm:block truncate">Veterinary Drug Compendium & Prescription System</p>
+          </div>
+        </div>
+
+        <!-- Quick actions (Offline status, Landing & Logout) -->
+        <div class="flex items-center gap-1.5 shrink-0">
+          <span id="badge-offline-status" class="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-semibold text-teal-200 bg-teal-900/80 px-2.5 py-1 rounded-lg border border-teal-700/60" title="Aplikasi dapat digunakan secara offline tanpa internet">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <span id="offline-status-text">Siap Offline</span>
+          </span>
+          <button type="button" id="btn-view-landing" class="px-2.5 py-1.5 rounded-lg bg-teal-900/70 hover:bg-teal-900 text-teal-200 hover:text-white flex items-center gap-1 transition text-xs font-semibold shadow-xs" title="Kembali ke Laman Landing">
+            <i class="ph-bold ph-house text-sm sm:text-base"></i>
+            <span class="hidden md:inline">Landing</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs (Horizontally Swipeable on Mobile) -->
+      <nav class="flex items-center gap-1 sm:gap-1.5 text-xs sm:text-sm font-medium overflow-x-auto no-scrollbar touch-scroll pb-1 -mx-3 px-3 sm:mx-0 sm:px-0">
+        <button id="nav-catalog" class="px-3 py-1.5 rounded-lg bg-teal-700 text-white flex items-center space-x-1.5 transition shrink-0 whitespace-nowrap">
+          <i class="ph ph-pill text-base sm:text-lg"></i>
+          <span>Katalog Internasional</span>
+        </button>
+        <button id="nav-indo" class="relative px-3 py-1.5 rounded-lg hover:bg-teal-700/60 text-teal-100 flex items-center space-x-1.5 transition shrink-0 whitespace-nowrap">
+          <span class="text-base sm:text-lg">ðŸ‡®ðŸ‡©</span>
+          <span>Obat Hewan Indonesia</span>
+          <span class="ml-1 bg-rose-600 text-white font-bold text-[10px] sm:text-xs px-1.5 py-0.2 rounded-full shadow-xs">434 INN</span>
+        </button>
+        <button id="nav-calculator" class="px-3 py-1.5 rounded-lg hover:bg-teal-700/60 text-teal-100 flex items-center space-x-1.5 transition shrink-0 whitespace-nowrap">
+          <i class="ph ph-calculator text-base sm:text-lg"></i>
+          <span>Kalkulator Dosis</span>
+        </button>
+        <button id="nav-rx" class="relative px-3 py-1.5 rounded-lg hover:bg-teal-700/60 text-teal-100 flex items-center space-x-1.5 transition shrink-0 whitespace-nowrap">
+          <i class="ph ph-file-text text-base sm:text-lg"></i>
+          <span>Resep Veteriner</span>
+          <span id="cart-badge" class="ml-1 bg-amber-500 text-slate-900 font-bold text-[10px] sm:text-xs px-1.5 py-0.2 rounded-full hidden">0</span>
+        </button>
+        <button id="nav-history" class="relative px-3 py-1.5 rounded-lg hover:bg-teal-700/60 text-teal-100 flex items-center space-x-1.5 transition shrink-0 whitespace-nowrap">
+          <i class="ph ph-clock-counter-clockwise text-base sm:text-lg"></i>
+          <span>Histori</span>
+          <span id="history-badge" class="ml-1 bg-amber-500 text-slate-900 font-bold text-[10px] sm:text-xs px-1.5 py-0.2 rounded-full hidden">0</span>
+        </button>
+        <button id="nav-settings" class="px-3 py-1.5 rounded-lg hover:bg-teal-700/60 text-teal-100 flex items-center space-x-1.5 transition shrink-0 whitespace-nowrap">
+          <i class="ph ph-gear text-base sm:text-lg"></i>
+          <span>Pengaturan</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6">
+
+    <!-- ========================================== -->
+    <!-- 1. DRUG CATALOG SECTION                    -->
+    <!-- ========================================== -->
+    <section id="section-catalog" class="space-y-6">
+      <!-- Announcement Banner for Indonesian Formulary -->
+      <div class="bg-gradient-to-r from-rose-600 via-rose-700 to-slate-900 rounded-2xl p-4 text-white shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3 border border-rose-500/40">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-xs flex items-center justify-center text-xl shrink-0">
+            ðŸ‡®ðŸ‡©
+          </div>
+          <div>
+            <h4 class="font-bold text-sm">Baru: Formularium Obat Hewan Indonesia (434 INN)</h4>
+            <p class="text-xs text-rose-100">Standar formularium nasional veteriner, pedoman residu ternak pangan, dan pengawasan khusus BPOM.</p>
+          </div>
+        </div>
+        <button type="button" id="btn-banner-open-indo" class="shrink-0 px-4 py-2 rounded-xl bg-white hover:bg-rose-50 text-rose-700 font-bold text-xs shadow-xs transition flex items-center gap-1.5">
+          <span>Buka Formularium Indonesia</span>
+          <i class="ph-bold ph-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- Search & Filter Controls -->
+      <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200 space-y-4">
+        <div class="flex flex-col lg:flex-row gap-4 justify-between items-stretch lg:items-center">
+          <div class="relative flex-1">
+            <i class="ph ph-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xl"></i>
+            <input 
+              type="text" 
+              id="drug-search-input" 
+              placeholder="Cari zat aktif (Active Ingredient), merk obat, atau indikasi..." 
+              class="w-full pl-11 pr-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 text-sm"
+            >
+          </div>
+          
+          <div class="flex flex-wrap items-center justify-between lg:justify-end gap-3">
+            <div class="flex items-center space-x-2 text-xs text-slate-500">
+              <span class="font-bold text-teal-800 bg-teal-50 px-2.5 py-1 rounded-full border border-teal-200" id="drug-count-badge">816 Obat Tersedia</span>
+              <span class="hidden sm:inline">â€¢</span>
+              <span class="hidden sm:inline">BSAVA 10th Ed. & Plumb's 7th Ed.</span>
+            </div>
+
+            <!-- Language Switcher in Drug Directory -->
+            <div class="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-semibold shadow-inner">
+              <span class="text-slate-500 px-2 flex items-center gap-1 font-medium">
+                <i class="ph-bold ph-globe text-sm"></i>
+                <span class="hidden md:inline" id="lbl-lang-indicator">Bahasa:</span>
+              </span>
+              <button type="button" id="btn-lang-id" class="lang-switch-btn px-2.5 py-1 rounded-lg bg-teal-600 text-white font-bold shadow-sm flex items-center gap-1 transition">
+                <span>ðŸ‡®ðŸ‡©</span> <span>Indonesia</span>
+              </button>
+              <button type="button" id="btn-lang-en" class="lang-switch-btn px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 font-medium flex items-center gap-1 transition">
+                <span>ðŸ‡¬ðŸ‡§</span> <span>English</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category filter tabs (consistent, clean, without 1,2,3 numbering) -->
+        <div class="space-y-2 pt-1">
+          <div class="flex items-center justify-between text-xs text-slate-600 font-semibold">
+            <span class="flex items-center gap-1.5">
+              <i class="ph-bold ph-squares-four text-teal-600"></i>
+              <span id="lbl-category-heading">Kategori Obat:</span>
+            </span>
+          </div>
+          <div class="flex items-center gap-2 overflow-x-auto pb-1 text-xs no-scrollbar touch-scroll">
+            <button data-category="all" class="category-chip px-3.5 py-1.5 rounded-xl bg-teal-600 text-white font-semibold text-xs whitespace-nowrap shadow-sm border border-teal-600 transition shrink-0">Semua Kategori</button>
+            <button data-category="antimicrobial" class="category-chip px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs whitespace-nowrap border border-slate-200 transition shrink-0">Antimikroba & Antiparasit</button>
+            <button data-category="analgesic" class="category-chip px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs whitespace-nowrap border border-slate-200 transition shrink-0">Analgesia & NSAID/Opioid</button>
+            <button data-category="anesthesia" class="category-chip px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs whitespace-nowrap border border-slate-200 transition shrink-0">Anestesi & Sedasi</button>
+            <button data-category="vitamin" class="category-chip px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs whitespace-nowrap border border-slate-200 transition shrink-0">Vitamin & Suplemen</button>
+            <button data-category="antihistamine" class="category-chip px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs whitespace-nowrap border border-slate-200 transition shrink-0">Antihistamin</button>
+            <button data-category="corticosteroid" class="category-chip px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs whitespace-nowrap border border-slate-200 transition shrink-0">Kortikosteroid</button>
+            <button data-category="cardiovascular" class="category-chip px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs whitespace-nowrap border border-slate-200 transition shrink-0">Kardiovaskular & Ginjal</button>
+            <button data-category="gastrointestinal" class="category-chip px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs whitespace-nowrap border border-slate-200 transition shrink-0">Saluran Cerna</button>
+            <button data-category="neurological" class="category-chip px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs whitespace-nowrap border border-slate-200 transition shrink-0">Saraf & Antikonvulsan</button>
+            <button data-category="endocrine" class="category-chip px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs whitespace-nowrap border border-slate-200 transition shrink-0">Endokrin & Hormon</button>
+            <button data-category="ophthalmology" class="category-chip px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs whitespace-nowrap border border-slate-200 transition shrink-0">Oftalmologi Mata</button>
+            <button data-category="other" class="category-chip px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs whitespace-nowrap border border-slate-200 transition shrink-0">Lainnya</button>
+          </div>
+        </div>
+
+        <!-- Reference Source Filter (BSAVA / Plumb's / Keduanya) -->
+        <div class="space-y-2 pt-2 border-t border-slate-100">
+          <div class="flex items-center justify-between text-xs text-slate-600 font-semibold">
+            <span class="flex items-center gap-1.5">
+              <i class="ph-bold ph-books text-teal-600"></i>
+              <span id="lbl-source-heading">Sumber Referensi Monograf:</span>
+            </span>
+          </div>
+          <div class="flex items-center gap-2 overflow-x-auto pb-1 text-xs no-scrollbar touch-scroll">
+            <button data-source="all" class="source-chip px-3.5 py-1.5 rounded-xl bg-teal-600 text-white font-semibold text-xs whitespace-nowrap shadow-sm border border-teal-600 transition shrink-0">
+              Semua Sumber (816 Obat)
+            </button>
+            <button data-source="both" class="source-chip px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs whitespace-nowrap border border-slate-200 transition shrink-0">
+              âš–ï¸ Tersedia di Keduanya (290 Komparatif)
+            </button>
+            <button data-source="bsava" class="source-chip px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs whitespace-nowrap border border-slate-200 transition shrink-0">
+              ðŸ“˜ BSAVA Small Animal Formulary (433)
+            </button>
+            <button data-source="plumbs" class="source-chip px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-xs whitespace-nowrap border border-slate-200 transition shrink-0">
+              ðŸ“™ Plumb's Veterinary Drug Handbook (673)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drugs List Container -->
+      <div id="drugs-grid" class="grid grid-cols-1 gap-6">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <!-- Catalog Pagination Controls -->
+      <div id="catalog-pagination">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 2. VETERINARY DOSAGE CALCULATOR SECTION   -->
+    <!-- ========================================== -->
+    <!-- ============================================================== -->
+    <!-- 2. VETERINARY DOSAGE & COMPOUNDING CALCULATOR (UNIFIED TAB)    -->
+    <!-- ============================================================== -->
+    <section id="section-calculator" class="hidden space-y-6">
+
+      <!-- ============================================================== -->
+      <!-- CALCULATOR SUB-TABS NAVIGATION (KALKULATOR, TEMPLATE, PANDUAN)  -->
+      <!-- ============================================================== -->
+      <div class="bg-white rounded-2xl p-2.5 shadow-sm border border-slate-200 flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar touch-scroll w-full pb-0.5">
+          <button type="button" id="subtab-btn-calculator" class="subtab-calc-btn px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl bg-teal-700 text-white font-bold text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2 shadow-sm transition shrink-0 whitespace-nowrap">
+            <i class="ph-bold ph-calculator text-sm sm:text-base"></i>
+            <span>Kalkulator & Peracikan</span>
+          </button>
+          
+          <button type="button" id="subtab-btn-templates" class="subtab-calc-btn px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2 transition shrink-0 whitespace-nowrap">
+            <i class="ph-bold ph-lightning text-amber-500 text-sm sm:text-base"></i>
+            <span>Template Obat</span>
+            <span id="templates-count-badge" class="px-1.5 py-0.5 rounded-full bg-teal-100 text-teal-800 text-[10px] sm:text-[11px] font-bold">5</span>
+          </button>
+
+          <button type="button" id="subtab-btn-guidelines" class="subtab-calc-btn px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs sm:text-sm flex items-center gap-1.5 sm:gap-2 transition shrink-0 whitespace-nowrap">
+            <i class="ph-bold ph-book-bookmark text-teal-600 text-sm sm:text-base"></i>
+            <span>Panduan & Algoritma drh</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- SUBVIEW 1: KALKULATOR DOSIS & MEJA PERACIKAN OBAT (DEFAULT)    -->
+      <!-- ============================================================== -->
+      <div id="subview-calc-main" class="space-y-6">
+
+        <!-- Quick Guidance Pill Banner -->
+        <div class="bg-gradient-to-r from-teal-900 to-slate-900 rounded-2xl p-3.5 px-4 text-white shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 border border-teal-700/40 text-xs">
+          <div class="flex items-center gap-2.5">
+            <span class="p-1.5 rounded-lg bg-teal-500/20 text-teal-300 font-bold">
+              <i class="ph-bold ph-lightbulb text-base"></i>
+            </span>
+            <span class="text-teal-100 font-medium">Butuh peresepan cepat? Gunakan template klinis siap pakai atau pelajari algoritma 4 tahap drh.</span>
+          </div>
+          <div class="flex items-center gap-2 self-end sm:self-auto shrink-0">
+            <button type="button" id="btn-quick-open-templates" class="px-3 py-1.5 rounded-lg bg-teal-700 hover:bg-teal-600 text-white font-semibold text-xs flex items-center gap-1.5 transition">
+              <i class="ph-bold ph-lightning text-amber-300"></i> Buka Template Obat
+            </button>
+            <button type="button" id="btn-quick-open-guidelines" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-teal-200 hover:text-white font-semibold text-xs flex items-center gap-1.5 transition border border-slate-700">
+              <i class="ph-bold ph-book-bookmark"></i> Panduan drh
+            </button>
+          </div>
+        </div>
+      
+      <!-- 2A. DOSIS TUNGGAL & PROFIL PASIEN (BERBASIS DATABASE MONOGRAF) -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-6">
+        <div class="border-b border-slate-100 pb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+          <div>
+            <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+              <i class="ph-bold ph-calculator text-teal-600"></i>
+              Kalkulator Dosis & Peracikan Obat Terpadu
+            </h2>
+            <p class="text-xs text-slate-500 mt-1">
+              Hitung dosis berdasarkan berat badan dan database monograf, lalu resepkan sebagai <b>Obat Tunggal</b> atau tambahkan ke <b>Formula Racikan</b>.
+            </p>
+          </div>
+          <span class="text-xs font-semibold px-3 py-1 rounded-full bg-teal-50 text-teal-800 border border-teal-200">
+            Database Terintegrasi (Plumb's & BSAVA)
+          </span>
+        </div>
+
+        <div id="dosage-calc-form" class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- Left Column: Inputs (7 cols) -->
+          <div class="lg:col-span-7 space-y-4">
+            
+            <!-- Species Selection -->
+            <div>
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">1. Spesies Pasien</label>
+              <div class="grid grid-cols-3 sm:grid-cols-6 gap-2" id="calc-species-selector">
+                <button type="button" data-species="canine" class="calc-spec-btn py-2 px-1 rounded-xl border-2 border-teal-600 bg-teal-50 text-teal-900 text-xs font-semibold flex flex-col items-center justify-center gap-1 transition">
+                  <i class="ph-bold ph-dog text-lg"></i> Anjing
+                </button>
+                <button type="button" data-species="feline" class="calc-spec-btn py-2 px-1 rounded-xl border border-slate-200 bg-white text-slate-700 text-xs font-semibold flex flex-col items-center justify-center gap-1 transition">
+                  <i class="ph-bold ph-cat text-lg"></i> Kucing
+                </button>
+                <button type="button" data-species="equine" class="calc-spec-btn py-2 px-1 rounded-xl border border-slate-200 bg-white text-slate-700 text-xs font-semibold flex flex-col items-center justify-center gap-1 transition">
+                  <i class="ph-bold ph-horse text-lg"></i> Kuda
+                </button>
+                <button type="button" data-species="bovine" class="calc-spec-btn py-2 px-1 rounded-xl border border-slate-200 bg-white text-slate-700 text-xs font-semibold flex flex-col items-center justify-center gap-1 transition">
+                  <i class="ph-bold ph-cow text-lg"></i> Sapi
+                </button>
+                <button type="button" data-species="exotic" class="calc-spec-btn py-2 px-1 rounded-xl border border-slate-200 bg-white text-slate-700 text-xs font-semibold flex flex-col items-center justify-center gap-1 transition">
+                  <i class="ph-bold ph-rabbit text-lg"></i> Kelinci
+                </button>
+                <button type="button" data-species="avian" class="calc-spec-btn py-2 px-1 rounded-xl border border-slate-200 bg-white text-slate-700 text-xs font-semibold flex flex-col items-center justify-center gap-1 transition">
+                  <i class="ph-bold ph-bird text-lg"></i> Unggas
+                </button>
+              </div>
+
+              <!-- Dynamic Species Safety Alert Box -->
+              <div id="calc-safety-alert-container" class="mt-2.5 space-y-2"></div>
+            </div>
+
+            <!-- Body Weight & Drug Selection -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="calc-weight" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">2. Berat Badan Pasien</label>
+                <div class="relative">
+                  <input 
+                    type="number" 
+                    id="calc-weight" 
+                    step="0.05" 
+                    min="0.05" 
+                    value="10" 
+                    required 
+                    class="w-full pl-3 pr-16 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 font-semibold text-slate-800"
+                  >
+                  <div class="absolute right-1.5 top-1/2 -translate-y-1/2 flex bg-slate-100 rounded-lg p-0.5 text-xs font-semibold">
+                    <button type="button" id="btn-unit-kg" class="px-2 py-1 rounded bg-teal-600 text-white">kg</button>
+                    <button type="button" id="btn-unit-lbs" class="px-2 py-1 rounded text-slate-600">lbs</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Searchable Drug Selection from Database -->
+              <div class="relative" id="calc-drug-search-wrapper">
+                <label for="calc-drug-search-input" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5 flex items-center justify-between">
+                  <span>3. Zat Aktif / Obat (Database)</span>
+                  <span id="calc-drug-selected-badge" class="text-[10px] text-teal-800 font-bold bg-teal-50 px-2 py-0.5 rounded-full border border-teal-200 hidden"></span>
+                </label>
+                <div class="relative">
+                  <i class="ph ph-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-base pointer-events-none"></i>
+                  <input 
+                    type="text" 
+                    id="calc-drug-search-input" 
+                    autocomplete="off" 
+                    placeholder="Ketik untuk mencari zat aktif atau merk..." 
+                    class="w-full pl-9 pr-8 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 font-semibold text-slate-800 text-xs sm:text-sm bg-white shadow-sm"
+                  >
+                  <button 
+                    type="button" 
+                    id="btn-calc-drug-clear" 
+                    class="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700 transition hidden p-1"
+                    title="Kosongkan pencarian"
+                  >
+                    <i class="ph-bold ph-x text-xs"></i>
+                  </button>
+                  <input type="hidden" id="calc-drug-select" value="">
+                </div>
+
+                <!-- Dropdown Search Results Box -->
+                <div 
+                  id="calc-drug-search-results" 
+                  class="absolute left-0 right-0 top-full mt-1.5 bg-white rounded-xl shadow-xl border border-slate-200 max-h-64 overflow-y-auto z-40 hidden divide-y divide-slate-100 text-xs"
+                >
+                  <!-- Populated dynamically by app.js -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Indication / Dose Rate & Formulation -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="calc-dose-rate" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">
+                  Dosis Rekomendasi (<span id="calc-dose-rate-unit">mg/kg</span>)
+                </label>
+                <input 
+                  type="number" 
+                  id="calc-dose-rate" 
+                  step="0.01" 
+                  min="0.01" 
+                  value="15" 
+                  required 
+                  class="w-full px-3 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 font-semibold text-slate-800 text-sm"
+                >
+                <p id="calc-dose-range-hint" class="text-xs text-slate-500 mt-1">Rentang: 10 - 20 mg/kg</p>
+              </div>
+
+              <div>
+                <label for="calc-formulation-select" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">Sediaan Stok Database</label>
+                <select id="calc-formulation-select" class="w-full py-2.5 px-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 text-sm font-medium bg-white">
+                  <!-- Populated by app.js from drug.formulations -->
+                </select>
+              </div>
+            </div>
+
+            <!-- Frequency & Duration -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="calc-frequency-select" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">Frekuensi Pemberian (Signa)</label>
+                <select id="calc-frequency-select" class="w-full py-2.5 px-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 text-sm font-medium bg-white">
+                  <option value="s.2.dd" selected>s.2.dd (2x sehari / q12h)</option>
+                  <option value="s.1.dd">s.1.dd (1x sehari / q24h)</option>
+                  <option value="s.3.dd">s.3.dd (3x sehari / q8h)</option>
+                  <option value="s.4.dd">s.4.dd (4x sehari / q6h)</option>
+                  <option value="s.i.m.m.">s.i.m.m. (Serahkan ke tangan dokter / Tindakan klinik)</option>
+                  <option value="s.u.c.">s.u.c. (Pemakaian telah diketahui)</option>
+                  <option value="p.r.n.">p.r.n. (Bila perlu / as needed)</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="calc-duration" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">Durasi Terapi (Hari)</label>
+                <input 
+                  type="number" 
+                  id="calc-duration" 
+                  min="1" 
+                  max="90" 
+                  value="7" 
+                  required 
+                  class="w-full px-3 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 font-semibold text-slate-800 text-sm"
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Calculation Result Card & Dual Action Buttons (5 cols) -->
+          <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-2xl p-6 flex flex-col justify-between shadow-lg space-y-4">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between border-b border-slate-700 pb-3">
+                <span class="text-xs font-semibold uppercase tracking-wider text-teal-400">Hasil Hitungan Dosis Pasien</span>
+                <span id="res-patient-summary" class="text-xs text-slate-400">10 kg â€¢ CANINE</span>
+              </div>
+
+              <!-- Main Result -->
+              <div class="space-y-1">
+                <div class="text-xs text-slate-400">Dosis Pasien per Administrasi:</div>
+                <div class="flex items-baseline space-x-2">
+                  <span id="res-dose-mg" class="text-3xl font-extrabold text-white">150.00</span>
+                  <span class="text-lg text-teal-300 font-semibold">mg</span>
+                </div>
+                <div id="res-unit-admin" class="text-sm font-medium text-amber-300">
+                  = 0.30 tab (500mg)
+                </div>
+              </div>
+
+              <!-- Details Grid -->
+              <div class="grid grid-cols-2 gap-3 pt-3 border-t border-slate-700/80 text-xs">
+                <div>
+                  <div class="text-slate-400">Dosis Harian:</div>
+                  <div id="res-daily-mg" class="text-sm font-bold text-white mt-0.5">300.00 mg / hari</div>
+                </div>
+                <div>
+                  <div class="text-slate-400">Frekuensi:</div>
+                  <div id="res-freq-text" class="text-sm font-bold text-white mt-0.5">s.2.dd (2x sehari)</div>
+                </div>
+                <div>
+                  <div class="text-slate-400">Total Kebutuhan:</div>
+                  <div id="res-total-units" class="text-sm font-bold text-teal-300 mt-0.5">5 Tablet</div>
+                </div>
+                <div>
+                  <div class="text-slate-400">Format Resep:</div>
+                  <div id="res-roman-qty" class="text-sm font-bold text-amber-400 mt-0.5">No V</div>
+                </div>
+              </div>
+
+              <!-- Clinical Warnings Box -->
+              <div id="res-warnings-box" class="hidden p-3 rounded-xl bg-rose-950/80 border border-rose-600/60 text-xs text-rose-200 space-y-1">
+                <!-- Warnings dynamically injected -->
+              </div>
+            </div>
+
+            <!-- Dual Action CTAs: Prescribe as Single OR Add to Compounded Formula -->
+            <div class="pt-4 border-t border-slate-700 space-y-2">
+              <button 
+                type="button" 
+                id="btn-add-to-cart" 
+                class="w-full py-2.5 px-4 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs shadow-md flex items-center justify-center space-x-2 transition"
+              >
+                <i class="ph-bold ph-pill text-base"></i>
+                <span>Tambahkan ke Resep sebagai Obat Tunggal</span>
+              </button>
+
+              <button 
+                type="button" 
+                id="btn-add-to-compound-formula" 
+                class="w-full py-2.5 px-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs shadow-md flex items-center justify-center space-x-2 transition"
+              >
+                <i class="ph-bold ph-flask text-base"></i>
+                <span>+ Masukkan Obat Ini ke Formula Racikan di Bawah</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+        <!-- Dynamic Antimicrobial Stewardship, Risk & Interaction Panel (University of Melbourne & AgVic) -->
+        <div id="calc-antimicrobial-box" class="hidden rounded-2xl border transition-all duration-300">
+          <!-- Dynamically populated by app.js when an antimicrobial is selected -->
+        </div>
+
+      <!-- 2B. MEJA FORMULA PERACIKAN OBAT (INTEGRATED COMPOUNDING DESK) -->
+      <div id="container-compound-calc" class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-6">
+        <div class="border-b border-slate-100 pb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <i class="ph-bold ph-flask text-purple-600"></i>
+              Formula & Algoritma Peracikan Obat (Veterinary Compounding Desk)
+            </h3>
+            <p class="text-xs text-slate-500 mt-0.5">
+              Rangkai obat-obatan dari database monograf ke dalam satu sediaan racikan pulveres/kapsul dengan aturan <b>Dengan d.t.d.</b> atau <b>Tanpa d.t.d.</b>
+            </p>
+          </div>
+        </div>
+
+        <!-- Compounding Configuration Bar -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs">
+          <!-- DTD Mode Segmented Toggle -->
+          <div>
+            <label class="block font-bold text-slate-700 mb-1.5">Metode Peracikan</label>
+            <div class="grid grid-cols-2 p-1 bg-slate-200/90 rounded-xl border border-slate-300 gap-1" id="comp-dtd-toggle-group">
+              <button 
+                type="button" 
+                id="btn-mode-dtd" 
+                class="py-1.5 px-2.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 bg-teal-600 text-white shadow-sm"
+              >
+                <i class="ph-bold ph-check-circle text-sm" id="icon-mode-dtd"></i>
+                <span>Dengan d.t.d.</span>
+              </button>
+              <button 
+                type="button" 
+                id="btn-mode-nondtd" 
+                class="py-1.5 px-2.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 text-slate-600 hover:text-slate-900"
+              >
+                <i class="ph ph-circle text-sm" id="icon-mode-nondtd"></i>
+                <span>Tanpa d.t.d.</span>
+              </button>
+            </div>
+            <input type="radio" name="comp-dtd-mode" value="dtd" checked class="hidden" id="radio-mode-dtd">
+            <input type="radio" name="comp-dtd-mode" value="nondtd" class="hidden" id="radio-mode-nondtd">
+            <p id="comp-dtd-hint" class="text-[11px] text-slate-500 mt-1">
+              Dosis per kapsul / puyer; total bahan baku = dosis Ã— jumlah racikan.
+            </p>
+            <div class="relative group inline-block mt-2">
+              <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-teal-800 bg-teal-50 hover:bg-teal-100 px-2 py-0.5 rounded-lg border border-teal-200 transition cursor-help">
+                <i class="ph-bold ph-info text-teal-600"></i> Kaidah Klinis Kucing & Anjing
+              </span>
+              <!-- Tooltip: Muncul saat kursor didekatkan, hilang saat dijauhkan -->
+              <div class="absolute left-0 bottom-full mb-2 hidden group-hover:block w-72 p-3 rounded-xl bg-slate-900 text-white text-[11px] leading-relaxed shadow-xl border border-slate-700 z-30 pointer-events-none transition-all">
+                <div class="font-bold text-amber-300 flex items-center gap-1 mb-1">
+                  <i class="ph-bold ph-lightbulb"></i> Kaidah Klinis Kucing & Anjing
+                </div>
+                <p class="text-slate-300">
+                  Pilih kemasan <b class="text-white">da in caps</b> (kapsul) untuk menutupi rasa pahit obat dan mencegah hipersalivasi/busa. Pemanis puyer anjing: <i class="text-teal-200">Saccharum lactis q.s.</i> (<b class="text-rose-400">DILARANG Xylitol</b>).
+                </p>
+                <div class="absolute left-6 top-full w-0 h-0 border-x-4 border-x-transparent border-t-4 border-t-slate-900"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Perintah Peracikan -->
+          <div>
+            <label for="comp-command" class="block font-bold text-slate-700 mb-1">Perintah Peracikan</label>
+            <select id="comp-command" class="w-full py-2 px-2.5 rounded-lg border border-slate-300 font-mono text-xs bg-white">
+              <option value="mfla pulv." selected>mfla pulv. (Misce fiat lege artis pulveres)</option>
+              <option value="m.f. pulv.">m.f. pulv. (Misce fiat pulveres)</option>
+              <option value="m.f. caps.">m.f. caps. (Misce fiat capsulae)</option>
+              <option value="m.f. susp.">m.f. susp. (Misce fiat suspensio)</option>
+            </select>
+          </div>
+
+          <!-- Pengemasan -->
+          <div>
+            <label for="comp-packaging" class="block font-bold text-slate-700 mb-1">Kemasan / Wadah</label>
+            <select id="comp-packaging" class="w-full py-2 px-2.5 rounded-lg border border-slate-300 font-mono text-xs bg-white">
+              <option value="da in caps" selected>da in caps (masukkan dalam kapsul)</option>
+              <option value="in chart.">in chart. (bungkus kertas puyer)</option>
+              <option value="flac">flac (dalam botol sirup)</option>
+            </select>
+          </div>
+
+          <!-- Jumlah Kemasan (No.) & Signa -->
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label for="comp-total-packs" class="block font-bold text-slate-700 mb-1">Jumlah Racikan</label>
+              <div class="flex items-center gap-1">
+                <span class="text-xs font-mono font-bold text-slate-500">No.</span>
+                <input type="number" id="comp-total-packs" value="10" min="1" max="100" class="w-full py-1.5 px-2 rounded-lg border border-slate-300 font-bold text-xs">
+              </div>
+            </div>
+            <div>
+              <label for="comp-signa" class="block font-bold text-slate-700 mb-1">Signa (Aturan)</label>
+              <input type="text" id="comp-signa" value="s.2.dd No I" class="w-full py-1.5 px-2 rounded-lg border border-slate-300 font-mono text-xs font-semibold">
+            </div>
+          </div>
+        </div>
+
+        <!-- Ingredients Input & Pharmacy Work Order -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- Left: Add Ingredient Form & Table (7 cols) -->
+          <div class="lg:col-span-7 space-y-4">
+            <div class="p-4 rounded-xl border border-slate-200 bg-white space-y-3">
+              <div class="flex justify-between items-center">
+                <h4 class="font-bold text-xs uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
+                  <i class="ph-bold ph-plus-circle text-teal-600"></i> Tambah Bahan Obat ke Formula Racikan
+                </h4>
+                <span class="text-[11px] text-slate-500 font-medium">Tersinkron dengan Database Obat</span>
+              </div>
+
+              <!-- Database Synchronized Drug & Stock Formulations -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                <div>
+                  <label for="comp-select-drug" class="block font-semibold text-slate-600 mb-1">Pilih Obat (Database)</label>
+                  <select id="comp-select-drug" class="w-full py-2 px-2 rounded-lg border border-slate-300 bg-white font-medium">
+                    <!-- Populated by app.js from VET_DRUG_DATABASE -->
+                  </select>
+                  <input type="text" id="comp-input-custom-name" placeholder="Nama obat kustom..." class="hidden w-full mt-1.5 py-1.5 px-2 rounded-lg border border-slate-300 text-xs">
+                </div>
+
+                <div>
+                  <label id="comp-dose-input-label" for="comp-input-dose" class="block font-semibold text-slate-600 mb-1">Dosis per Kapsul (mg)</label>
+                  <input type="number" id="comp-input-dose" step="0.05" value="50" class="w-full py-2 px-2.5 rounded-lg border border-slate-300 font-bold">
+                  <p class="text-[10px] text-slate-400 mt-0.5">Otomatis dihitung dari BB pasien</p>
+                </div>
+
+                <div>
+                  <label for="comp-select-stock" class="block font-semibold text-slate-600 mb-1">Sediaan Stok di Apotek</label>
+                  <select id="comp-select-stock" class="w-full py-2 px-2 rounded-lg border border-slate-300 bg-white font-medium">
+                    <!-- Dynamically populated from drug's formulations -->
+                  </select>
+                </div>
+              </div>
+
+              <div class="flex justify-end pt-1">
+                <button type="button" id="btn-add-comp-ingredient" class="px-3.5 py-1.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white font-semibold text-xs flex items-center gap-1.5 shadow-sm transition">
+                  <i class="ph-bold ph-plus"></i> Tambahkan ke Racikan
+                </button>
+              </div>
+            </div>
+
+            <!-- Ingredients Table -->
+            <div class="rounded-xl border border-slate-200 overflow-hidden bg-white">
+              <div class="bg-slate-50 px-4 py-2 border-b border-slate-200 flex justify-between items-center text-xs">
+                <span class="font-bold text-slate-700">Daftar Bahan Racikan Pasien</span>
+                <button type="button" id="btn-clear-comp-ingredients" class="text-rose-600 hover:text-rose-800 text-[11px] font-semibold">
+                  Kosongkan Bahan
+                </button>
+              </div>
+              <div class="overflow-x-auto">
+                <table class="w-full text-left text-xs border-collapse">
+                  <thead>
+                    <tr class="bg-slate-100/60 text-slate-600 font-semibold border-b border-slate-200">
+                      <th class="py-2 px-3">Nama Obat</th>
+                      <th id="th-comp-dose" class="py-2 px-3">Dosis per Kapsul (mg)</th>
+                      <th class="py-2 px-3">Sediaan Stok Apotek</th>
+                      <th id="th-comp-taken" class="py-2 px-3">Bahan Baku Diambil</th>
+                      <th class="py-2 px-3 text-right">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody id="comp-ingredients-tbody" class="divide-y divide-slate-100 font-mono">
+                    <!-- Rendered by app.js -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Algorithm Preview & Pharmacy Work Order (5 cols) -->
+          <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-2xl p-6 flex flex-col justify-between shadow-lg space-y-4">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between border-b border-slate-700 pb-3">
+                <span class="text-xs font-semibold uppercase tracking-wider text-teal-400">Preview Algoritma Resep Racikan</span>
+                <span id="comp-mode-badge" class="text-[11px] font-mono font-bold px-2 py-0.5 rounded bg-teal-900 text-teal-200 border border-teal-700">DENGAN D.T.D.</span>
+              </div>
+
+              <!-- Prescription Code Preview -->
+              <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs font-mono text-emerald-300">
+                <pre id="comp-rx-preview-text" class="whitespace-pre-wrap font-mono leading-relaxed"></pre>
+              </div>
+
+              <!-- Pharmacy Work Order Breakdown -->
+              <div class="p-3.5 rounded-xl bg-slate-800/80 border border-slate-700 space-y-2 text-xs">
+                <div class="font-bold text-amber-300 flex items-center gap-1.5">
+                  <i class="ph-bold ph-scales"></i> Petunjuk Peracik (Pharmacy Work Order):
+                </div>
+                <div id="comp-work-order-list" class="space-y-1.5 text-[11px] text-slate-300 font-mono">
+                  <!-- Populated by app.js -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Add Compounded to Cart CTA -->
+            <div class="pt-4 border-t border-slate-700">
+              <button 
+                type="button" 
+                id="btn-add-compound-cart" 
+                class="w-full py-3 px-4 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-sm shadow-md flex items-center justify-center space-x-2 transition"
+              >
+                <i class="ph-bold ph-shopping-cart-simple text-lg"></i>
+                <span>Tambahkan Racikan ke Keranjang Resep</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div> <!-- End of #container-compound-calc -->
+    </div> <!-- End of #subview-calc-main -->
+
+      <!-- ============================================================== -->
+      <!-- SUBVIEW 2: TEMPLATE OBAT (MANAGE, ADD, EDIT, APPLY)           -->
+      <!-- ============================================================== -->
+      <div id="subview-calc-templates" class="hidden space-y-6">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-5">
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 border-b border-slate-100 pb-4">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-800 font-bold text-xs border border-amber-200 flex items-center gap-1">
+                  <i class="ph-bold ph-lightning text-amber-500"></i> Template Kasus Klinis
+                </span>
+                <span class="text-xs text-slate-500 font-medium">Bisa Disesuaikan, Ditambah & Diedit</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mt-1">Koleksi Template Obat & Resep Populer drh</h3>
+              <p class="text-xs text-slate-500 mt-0.5">Pilih template untuk mengisi parameter kalkulator secara instan, atau simpan template racikan/dosis baru untuk kasus rutin klinik Anda.</p>
+            </div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <button type="button" id="btn-add-template-modal" class="px-4 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold flex items-center gap-1.5 shadow-sm transition">
+                <i class="ph-bold ph-plus-circle text-base"></i> + Tambah Template Baru
+              </button>
+              <button type="button" id="btn-reset-templates-default" class="px-3 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-100 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition">
+                <i class="ph-bold ph-arrows-counter-clockwise"></i> Reset Standar
+              </button>
+            </div>
+          </div>
+
+          <!-- Filter & Search Toolbar -->
+          <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 text-xs">
+            <div class="sm:col-span-6 relative">
+              <i class="ph ph-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-base"></i>
+              <input 
+                type="text" 
+                id="tpl-search-input" 
+                placeholder="Cari nama kasus, obat, atau diagnosis..." 
+                class="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 text-xs"
+              >
+            </div>
+            <div class="sm:col-span-3">
+              <select id="tpl-filter-species" class="w-full py-2.5 px-3 rounded-xl border border-slate-300 bg-white font-medium text-xs">
+                <option value="all">Semua Spesies</option>
+                <option value="canine">ðŸ¶ Anjing</option>
+                <option value="feline">ðŸ± Kucing</option>
+                <option value="bovine">ðŸ„ Sapi / Ruminan</option>
+                <option value="equine">ðŸ´ Kuda</option>
+                <option value="exotic">ðŸ° Kelinci / Eksotik</option>
+                <option value="avian">ðŸ¦œ Unggas</option>
+                <option value="clinic">ðŸ©º Stok Klinik</option>
+              </select>
+            </div>
+            <div class="sm:col-span-3">
+              <select id="tpl-filter-type" class="w-full py-2.5 px-3 rounded-xl border border-slate-300 bg-white font-medium text-xs">
+                <option value="all">Semua Tipe Resep</option>
+                <option value="compounding">Racikan Pulveres / Kapsul</option>
+                <option value="single">Obat Tunggal</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Templates Cards Grid -->
+          <div id="templates-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Rendered dynamically by app.js -->
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- SUBVIEW 3: PANDUAN & 4 TAHAP ALGORITMA PERESEPAN DRH           -->
+      <!-- ============================================================== -->
+      <div id="subview-calc-guidelines" class="hidden space-y-6">
+        <div id="prescription-algorithm-card" class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-6">
+          <!-- Rendered dynamically by app.js from VET_PRESCRIPTION_ALGORITHM -->
+        </div>
+
+        <!-- Matriks Spektrum Aktivitas & Lembar Fakta MRSP (University of Melbourne / AgVic) -->
+        <div id="antimicrobial-guideline-container" class="space-y-6">
+          <!-- Dynamically populated with Spectrum Table & MRSP Guidelines -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. RESEP VETERINER / PRESCRIPTION SECTION  -->
+    <!-- ========================================== -->
+    <section id="section-rx" class="hidden space-y-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <!-- Left Column: Cart Items & Patient Info (6 cols) -->
+        <div class="lg:col-span-6 space-y-6">
+          
+          <!-- Medication Cart List -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+              <div class="flex items-center space-x-2">
+                <i class="ph-bold ph-shopping-bag text-teal-600 text-xl"></i>
+                <h3 class="font-bold text-slate-800">Keranjang Obat Pasien</h3>
+              </div>
+              <button id="btn-clear-cart" class="text-xs text-rose-600 hover:text-rose-800 font-semibold flex items-center gap-1">
+                <i class="ph ph-trash"></i> Kosongkan
+              </button>
+            </div>
+
+            <div id="cart-items-container" class="space-y-3">
+              <!-- Rendered by app.js -->
+            </div>
+          </div>
+
+          <!-- Patient & Clinic Form -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-4">
+            <h3 class="font-bold text-slate-800 border-b border-slate-100 pb-3 flex items-center gap-2">
+              <i class="ph ph-identification-card text-teal-600"></i>
+              Data Pasien & Pemilik
+            </h3>
+            
+            <div class="grid grid-cols-2 gap-3 text-xs">
+              <div>
+                <label class="block font-semibold text-slate-600 mb-1">Nama Pasien (Hewan)</label>
+                <input type="text" id="rx-patient-name" value="Milo" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-teal-500 font-medium">
+              </div>
+              <div>
+                <label class="block font-semibold text-slate-600 mb-1">Nama Pemilik (Owner)</label>
+                <input type="text" id="rx-owner-name" value="Budi Santoso" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-teal-500 font-medium">
+              </div>
+              <div>
+                <label class="block font-semibold text-slate-600 mb-1">Spesies / Ras</label>
+                <input type="text" id="rx-patient-species" value="Canine / Golden Retriever" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-teal-500 font-medium">
+              </div>
+              <div>
+                <label class="block font-semibold text-slate-600 mb-1">Berat Badan (kg)</label>
+                <input type="number" id="rx-patient-weight" value="25" class="w-full px-3 py-2 rounded-lg border border-slate-300 focus:ring-teal-500 font-medium">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Formal Prescription Document Preview (6 cols) -->
+        <div class="lg:col-span-6 space-y-4">
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-4">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+              <div class="flex items-center space-x-2">
+                <i class="ph-bold ph-receipt text-teal-600 text-xl"></i>
+                <h3 class="font-bold text-slate-800">Lembar Resep Formal (Algorithm Preview)</h3>
+              </div>
+              <div class="flex space-x-2">
+                <button id="btn-copy-rx" class="px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center gap-1 transition">
+                  <i class="ph ph-copy"></i> Salin Teks
+                </button>
+                <button id="btn-save-rx" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-teal-600 hover:bg-teal-700 text-white flex items-center gap-1.5 shadow-sm transition">
+                  <i class="ph-bold ph-floppy-disk text-sm"></i>
+                  <span>Simpan Resep Obat</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Algorithm Explanation Banner -->
+            <div class="p-3 bg-teal-50 rounded-xl border border-teal-200 text-xs text-teal-900 flex items-start gap-2">
+              <i class="ph ph-info text-teal-700 text-base shrink-0 mt-0.5"></i>
+              <div class="flex-1">
+                <span class="font-bold">Algoritma Resep Aktif:</span>
+                <span class="font-mono text-teal-800 ml-1">R/ [Obat] [Dosis] [Sediaan] [Qty] | [Signa / s.2.dd No I]</span>
+                <div class="text-[11px] text-teal-700 mt-0.5">
+                  Klik <b>"Simpan Resep Obat"</b> untuk mengarsipkan resep ini. Fitur <b>Cetak Resep</b> dapat dilakukan setelah disimpan di menu <b>History Pembuatan Obat</b>.
+                </div>
+              </div>
+            </div>
+
+            <!-- Formal Prescription Paper Slip -->
+            <div id="rx-paper-preview" class="prescription-slip border-2 border-slate-800 rounded-xl p-6 bg-amber-50/20 font-serif text-slate-900 space-y-4 shadow-sm">
+              <!-- Rendered by app.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. HISTORY PEMBUATAN OBAT / RESEP SECTION  -->
+    <!-- ========================================== -->
+    <section id="section-history" class="hidden space-y-6">
+      <!-- Section Header -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-4">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-slate-100 pb-4">
+          <div>
+            <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+              <i class="ph-bold ph-clock-counter-clockwise text-teal-600"></i>
+              History Pembuatan Obat & Arsip Resep
+            </h2>
+            <p class="text-xs text-slate-500 mt-1">
+              Daftar seluruh resep obat tunggal dan formula racikan yang telah disimpan. Cetak lembar resep resmi, tinjau arsip pasien, atau salin teks format resep.
+            </p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button id="btn-clear-all-history" class="px-3 py-2 rounded-xl border border-rose-200 text-rose-600 hover:bg-rose-50 text-xs font-semibold flex items-center gap-1.5 transition">
+              <i class="ph-bold ph-trash"></i> Bersihkan Semua History
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter & Search Controls -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 text-xs">
+          <div class="relative flex-1 max-w-md">
+            <i class="ph ph-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-base"></i>
+            <input 
+              type="text" 
+              id="history-search-input" 
+              placeholder="Cari No. Resep, nama pasien, pemilik, atau nama obat..." 
+              class="w-full pl-9 pr-4 py-2 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-500 text-xs text-slate-800"
+            >
+          </div>
+          <div class="flex items-center gap-3">
+            <span id="history-counter-text" class="text-xs text-slate-500 font-medium whitespace-nowrap">
+              0 resep tersimpan
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- History Prescriptions List Container -->
+      <div id="history-items-container" class="space-y-4">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. APPLICATION SETTINGS SECTION            -->
+    <!-- (Includes Language, Latin Terms, Firebase) -->
+    <!-- ========================================== -->
+    <section id="section-settings" class="hidden space-y-6">
+      
+      <!-- Section Header -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+            <i class="ph-bold ph-gear text-teal-600"></i>
+            <span>Pengaturan Sistem & Database</span>
+          </h2>
+          <p class="text-xs text-slate-500 mt-1">
+            Konfigurasi preferensi bahasa aplikasi, database terminologi singkatan Latin resep, dan integrasi Firebase.
+          </p>
+        </div>
+        <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-teal-50 text-teal-800 border border-teal-200 flex items-center gap-1.5">
+          <i class="ph-bold ph-database"></i>
+          <span id="settings-db-status-badge">816 Monograf Aktif (BSAVA & Plumb's 7e)</span>
+        </span>
+      </div>
+
+      <!-- Settings Sub-Navigation Tabs (Profile First) -->
+      <div class="flex items-center gap-2 border-b border-slate-200 pb-2 overflow-x-auto no-scrollbar touch-scroll">
+        <button type="button" id="settings-tab-btn-profile" class="settings-subtab-btn shrink-0 px-4 py-2 rounded-xl bg-teal-600 text-white font-semibold text-xs flex items-center gap-2 shadow-sm transition whitespace-nowrap">
+          <i class="ph-bold ph-user-circle text-base"></i>
+          <span>Data Profil Dokter</span>
+        </button>
+        <button type="button" id="settings-tab-btn-lang" class="settings-subtab-btn shrink-0 px-4 py-2 rounded-xl bg-white hover:bg-slate-100 text-slate-700 font-semibold text-xs flex items-center gap-2 border border-slate-200 transition whitespace-nowrap">
+          <i class="ph-bold ph-globe text-base"></i>
+          <span>Preferensi Bahasa</span>
+        </button>
+        <button type="button" id="settings-tab-btn-terms" class="settings-subtab-btn shrink-0 px-4 py-2 rounded-xl bg-white hover:bg-slate-100 text-slate-700 font-semibold text-xs flex items-center gap-2 border border-slate-200 transition whitespace-nowrap">
+          <i class="ph-bold ph-translate text-base"></i>
+          <span>Terminologi Latin</span>
+        </button>
+        <button type="button" id="settings-tab-btn-firebase" class="settings-subtab-btn shrink-0 px-4 py-2 rounded-xl bg-white hover:bg-slate-100 text-slate-700 font-semibold text-xs flex items-center gap-2 border border-slate-200 transition whitespace-nowrap">
+          <i class="ph-bold ph-cloud-check text-base"></i>
+          <span>Firebase Hosting</span>
+        </button>
+      </div>
+
+      <!-- SUB-PANEL 1: LANGUAGE PREFERENCE (AND HIDDEN DB TOOLS) -->
+            <!-- SUB-PANEL 0: USER PROFILE DATA -->
+      <div id="settings-panel-profile" class="space-y-6">
+        
+        <!-- Profile Header Summary Card -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <div class="relative shrink-0">
+              <div id="profile-avatar-container" class="w-18 h-18 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-tr from-teal-700 to-teal-500 text-white flex items-center justify-center text-2xl sm:text-3xl font-bold shadow-md overflow-hidden border-2 border-white">
+                <span id="profile-avatar-initials">DR</span>
+                <img id="profile-avatar-img" class="w-full h-full object-cover hidden" alt="Avatar Pengguna">
+              </div>
+              <div id="profile-provider-badge-icon" class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-white shadow flex items-center justify-center text-xs">
+                <i class="ph-bold ph-shield-check text-teal-600"></i>
+              </div>
+            </div>
+            
+            <div class="space-y-1">
+              <div class="flex flex-wrap items-center gap-2">
+                <h3 id="profile-header-name" class="text-lg sm:text-xl font-bold text-slate-900">drh. Pratama Wijaya, M.Si</h3>
+                <span id="profile-header-provider-badge" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-teal-50 text-teal-800 border border-teal-200">
+                  Akun Dokter Hewan
+                </span>
+              </div>
+              <p id="profile-header-role" class="text-xs text-slate-500 font-medium">Praktisi Hewan Kecil &bull; SIP Aktif</p>
+              <p id="profile-header-email" class="text-xs text-slate-400 font-mono">pratama.vet@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-semibold px-3 py-1.5 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>Tersinkronisasi Otomatis ke E-Resep</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Profile Edit Form Card -->
+        <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-6">
+          <div class="border-b border-slate-100 pb-4">
+            <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+              <i class="ph-bold ph-identification-card text-teal-600"></i>
+              <span>Data Identitas & Fasilitas Praktik Klinis</span>
+            </h3>
+            <p class="text-xs text-slate-500 mt-0.5">
+              Data profil ini secara otomatis digunakan sebagai identitas resmi (Inscriptio & Subscriptio) pada cetak resep dokter hewan.
+            </p>
+          </div>
+
+          <form id="form-user-profile" class="space-y-6">
+            
+            <!-- Grid 1: Personal & Legal Data -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 text-xs">
+              
+              <div class="space-y-1.5">
+                <label for="prof-input-name" class="block font-bold text-slate-700">
+                  Nama Lengkap & Gelar <span class="text-rose-500">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="prof-input-name" 
+                  required 
+                  placeholder="Contoh: drh. Pratama Wijaya, M.Si" 
+                  class="w-full py-2.5 px-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 font-semibold text-slate-800 text-xs sm:text-sm"
+                >
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="prof-input-sip" class="block font-bold text-slate-700">
+                  Nomor SIP / SNT Resmi <span class="text-rose-500">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="prof-input-sip" 
+                  required 
+                  placeholder="Contoh: 503/014/SIP-DRH/2026" 
+                  class="w-full py-2.5 px-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono font-semibold text-slate-800 text-xs sm:text-sm"
+                >
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="prof-input-role" class="block font-bold text-slate-700">
+                  Peran / Spesialisasi
+                </label>
+                <select id="prof-input-role" class="w-full py-2.5 px-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 font-medium text-slate-800 text-xs sm:text-sm bg-white">
+                  <option value="Dokter Hewan Praktisi (Small Animal)">Dokter Hewan Praktisi Hewan Kecil (Kucing & Anjing)</option>
+                  <option value="Dokter Hewan Eksotik & Satwa Liar">Dokter Hewan Hewan Eksotik & Satwa Liar</option>
+                  <option value="Dokter Hewan Kuda & Ternak Besar">Dokter Hewan Kuda & Ternak Besar</option>
+                  <option value="Mahasiswa Koas / PPDH">Mahasiswa Koas / PPDH Kedokteran Hewan</option>
+                  <option value="Dosen & Peneliti Farmakologi">Dosen / Peneliti Farmakologi Veteriner</option>
+                </select>
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="prof-input-email" class="block font-bold text-slate-700">
+                  Email Akun / Kontak
+                </label>
+                <input 
+                  type="email" 
+                  id="prof-input-email" 
+                  placeholder="dokter@gmail.com" 
+                  class="w-full py-2.5 px-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-slate-800 text-xs sm:text-sm"
+                >
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="prof-input-phone" class="block font-bold text-slate-700">
+                  Nomor WhatsApp / HP Dokter
+                </label>
+                <input 
+                  type="text" 
+                  id="prof-input-phone" 
+                  placeholder="+62 812-xxxx-xxxx" 
+                  class="w-full py-2.5 px-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-slate-800 text-xs sm:text-sm"
+                >
+              </div>
+
+              <div class="space-y-1.5">
+                <label for="prof-input-avatar" class="block font-bold text-slate-700">
+                  URL Foto Profil (Opsional)
+                </label>
+                <input 
+                  type="url" 
+                  id="prof-input-avatar" 
+                  placeholder="https://..." 
+                  class="w-full py-2.5 px-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-slate-800 text-xs sm:text-sm"
+                >
+              </div>
+
+            </div>
+
+            <!-- Grid 2: Clinic Facility Data -->
+            <div class="border-t border-slate-100 pt-5 space-y-4">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-teal-800 flex items-center gap-1.5">
+                <i class="ph-bold ph-buildings"></i>
+                <span>Data Fasilitas Praktik (Klinik / Rumah Sakit Hewan)</span>
+              </h4>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 text-xs">
+                
+                <div class="space-y-1.5 sm:col-span-2">
+                  <label for="prof-input-clinic" class="block font-bold text-slate-700">
+                    Nama Klinik / Praktik Bersama / RSH <span class="text-rose-500">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="prof-input-clinic" 
+                    required 
+                    placeholder="Contoh: Klinik Hewan Sehat Vet Care" 
+                    class="w-full py-2.5 px-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 font-semibold text-slate-800 text-xs sm:text-sm"
+                  >
+                </div>
+
+                <div class="space-y-1.5">
+                  <label for="prof-input-clinic-phone" class="block font-bold text-slate-700">
+                    Telepon Fasilitas / Darurat
+                  </label>
+                  <input 
+                    type="text" 
+                    id="prof-input-clinic-phone" 
+                    placeholder="(021) 789-0123 / 0811-xxxx" 
+                    class="w-full py-2.5 px-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-slate-800 text-xs sm:text-sm"
+                  >
+                </div>
+
+                <div class="space-y-1.5 sm:col-span-3">
+                  <label for="prof-input-address" class="block font-bold text-slate-700">
+                    Alamat Lengkap Praktik
+                  </label>
+                  <input 
+                    type="text" 
+                    id="prof-input-address" 
+                    placeholder="Contoh: Jl. Kesehatan Hewan No. 8, Jakarta Selatan" 
+                    class="w-full py-2.5 px-3.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-slate-800 text-xs sm:text-sm"
+                  >
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Footer Actions -->
+            <div class="border-t border-slate-100 pt-5 flex flex-wrap items-center justify-between gap-3">
+              <div class="flex items-center gap-2">
+                <button 
+                  type="submit" 
+                  class="px-5 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs flex items-center gap-1.5 shadow-md shadow-teal-600/20 transition hover:-translate-y-0.5"
+                >
+                  <i class="ph-bold ph-floppy-disk text-base"></i>
+                  <span>Simpan Perubahan Profil</span>
+                </button>
+                <button 
+                  type="button" 
+                  id="btn-prof-reset-default" 
+                  class="px-4 py-2.5 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold text-xs transition"
+                >
+                  Reset Default
+                </button>
+              </div>
+
+              <div class="flex items-center gap-2 text-xs text-slate-400">
+                <i class="ph-bold ph-check text-emerald-500"></i>
+                <span>Tersimpan di peramban & tersinkronisasi ke cetak resep</span>
+              </div>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+
+      <!-- SUB-PANEL 1: LANGUAGE PREFERENCE -->
+      <div id="settings-panel-lang" class="hidden space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+          <!-- 1. Language Preference Card -->
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-5 lg:col-span-2">
+            <div class="border-b border-slate-100 pb-3">
+              <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                <i class="ph-bold ph-translate text-teal-600"></i>
+                <span>Preferensi Bahasa Direktori Obat</span>
+              </h3>
+              <p class="text-xs text-slate-500 mt-0.5">
+                Pilih bahasa utama untuk menampilkan terminologi klinis, monograf, dan label sediaan.
+              </p>
+            </div>
+
+            <div class="space-y-3 max-w-xl">
+              <label class="block text-xs font-semibold uppercase tracking-wider text-slate-600">Pilih Bahasa Tampilan:</label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button type="button" id="settings-lang-id-btn" class="p-3.5 rounded-xl border-2 border-teal-600 bg-teal-50 text-teal-900 font-semibold text-xs flex items-center gap-2.5 shadow-sm transition">
+                  <span class="text-xl">ðŸ‡®ðŸ‡©</span>
+                  <div class="text-left">
+                    <div class="font-bold text-sm">Bahasa Indonesia</div>
+                    <div class="text-[11px] text-teal-700">Terminologi farmakologi & resep lokal</div>
+                  </div>
+                </button>
+
+                <button type="button" id="settings-lang-en-btn" class="p-3.5 rounded-xl border border-slate-200 bg-white text-slate-700 font-semibold text-xs flex items-center gap-2.5 hover:bg-slate-50 transition">
+                  <span class="text-xl">ðŸ‡¬ðŸ‡§</span>
+                  <div class="text-left">
+                    <div class="font-bold text-sm">English</div>
+                    <div class="text-[11px] text-slate-500">BSAVA British Formulary original</div>
+                  </div>
+                </button>
+              </div>
+              <p class="text-[11px] text-slate-400 italic">
+                *Anda juga dapat mengganti bahasa secara instan langsung dari bilah atas katalog obat.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2. Database Status & Quick Actions (Hidden per user request) -->
+          <div class="hidden bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-5">
+            <div class="border-b border-slate-100 pb-3">
+              <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                <i class="ph-bold ph-database text-teal-600"></i>
+                <span>Status & Ekspor Database Obat</span>
+              </h3>
+              <p class="text-xs text-slate-500 mt-0.5">
+                Informasi koleksi monograf obat yang saat ini terpasang di memori browser.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2 text-xs">
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600 font-medium">Total Monograf Obat:</span>
+                <span id="settings-stat-count" class="font-bold text-slate-900 font-mono text-sm">433 Obat</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600 font-medium">Sumber Referensi Utama:</span>
+                <span class="font-semibold text-teal-800">BSAVA Small Animal Formulary 10th Ed. & Plumb's</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600 font-medium">Bilingual Content Support:</span>
+                <span class="font-semibold text-emerald-700">Tersedia (ID & EN)</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600 font-medium">Kalkulator Dosis & Racikan:</span>
+                <span class="font-semibold text-emerald-700">Tersinkronisasi Penuh</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2 pt-1">
+              <button type="button" id="btn-export-db-json" class="flex-1 px-4 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-xs flex items-center justify-center gap-1.5 shadow-sm transition">
+                <i class="ph-bold ph-download-simple text-base"></i>
+                <span>Ekspor Database (.json)</span>
+              </button>
+              <button type="button" id="btn-reset-db-default" class="px-4 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-100 text-slate-700 font-semibold text-xs flex items-center justify-center gap-1.5 transition">
+                <i class="ph-bold ph-arrow-counter-clockwise text-base"></i>
+                <span>Muat Ulang Default BSAVA</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 3. Upload / Import Database JSON File (Hidden per user request) -->
+          <div class="hidden lg:col-span-2 bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-5">
+            <div class="border-b border-slate-100 pb-3 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+              <div>
+                <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                  <i class="ph-bold ph-upload-simple text-teal-600"></i>
+                  <span>Update Database dari File .JSON</span>
+                </h3>
+                <p class="text-xs text-slate-500 mt-0.5">
+                  Unggah file .json baru (seperti file BSAVA ekstrak atau custom formularium) untuk memperbarui atau menambah data obat aplikasi.
+                </p>
+              </div>
+              <span class="text-[11px] font-mono bg-slate-100 text-slate-600 px-2.5 py-1 rounded-lg border border-slate-200">
+                Format: JSON Monograf / BSAVA Extract
+              </span>
+            </div>
+
+            <!-- File Upload Dropzone -->
+            <div id="json-dropzone" class="border-2 border-dashed border-teal-300 hover:border-teal-500 bg-teal-50/30 rounded-2xl p-6 text-center transition cursor-pointer">
+              <input type="file" id="input-db-json-file" accept=".json,application/json" class="hidden">
+              <div class="max-w-md mx-auto space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center mx-auto text-2xl shadow-inner">
+                  <i class="ph-bold ph-file-code"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-bold text-slate-800">Klik di sini atau seret file .json ke area ini</p>
+                  <p class="text-xs text-slate-500 mt-0.5">Mendukung file ekstrak BSAVA (bsava_part_a_full.json) atau file database obat kustom</p>
+                </div>
+                <button type="button" id="btn-select-json-file" class="px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-xs inline-flex items-center gap-1.5 shadow-sm transition">
+                  <i class="ph-bold ph-folder-open"></i> Pilih File .JSON
+                </button>
+              </div>
+            </div>
+
+            <!-- File Analysis Result Box (Hidden by default) -->
+            <div id="json-file-preview" class="hidden p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-3 text-xs">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-800 flex items-center gap-1.5">
+                  <i class="ph-bold ph-check-circle text-emerald-600"></i> File Terdeteksi
+                </span>
+                <span id="preview-file-size" class="font-mono text-slate-500">0 KB</span>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div class="p-2.5 rounded-lg bg-white border border-slate-200">
+                  <span class="text-slate-500 block text-[11px]">Nama File:</span>
+                  <span id="preview-file-name" class="font-bold text-slate-800 truncate block">-</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-white border border-slate-200">
+                  <span class="text-slate-500 block text-[11px]">Jumlah Monograf:</span>
+                  <span id="preview-file-count" class="font-bold text-teal-700 font-mono text-sm block">0</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-white border border-slate-200">
+                  <span class="text-slate-500 block text-[11px]">Status Validasi:</span>
+                  <span id="preview-file-status" class="font-bold text-emerald-600 block">Siap Diimpor</span>
+                </div>
+              </div>
+              <div class="flex justify-end gap-2 pt-1">
+                <button type="button" id="btn-cancel-json-import" class="px-3.5 py-1.5 rounded-xl border border-slate-300 text-slate-600 hover:bg-slate-200 font-semibold transition">
+                  Batal
+                </button>
+                <button type="button" id="btn-apply-json-import" class="px-5 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold flex items-center gap-1.5 shadow-sm transition">
+                  <i class="ph-bold ph-check"></i> Terapkan ke Database Aplikasi
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SUB-PANEL 2: LATIN TERMINOLOGY (Moved into Settings) -->
+      <div id="settings-panel-terms" class="hidden space-y-6">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-4">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-slate-100 pb-4">
+            <div>
+              <div class="flex items-center gap-2">
+                <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+                  <i class="ph-bold ph-translate text-teal-600"></i>
+                  Database Terminologi Singkatan Resep Latin
+                </h2>
+                <span id="terms-count-badge" class="font-bold text-teal-800 bg-teal-50 px-2.5 py-0.5 rounded-full border border-teal-200 text-xs">
+                  79 Istilah
+                </span>
+              </div>
+              <p class="text-xs text-slate-500 mt-1">Standar resmi penulisan resep veteriner (signa, frekuensi, rute, bentuk sediaan, dan instruksi peracikan).</p>
+            </div>
+            <button id="btn-add-term-modal" class="px-3 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-semibold flex items-center gap-1.5 shadow-sm transition">
+              <i class="ph-bold ph-plus"></i> Tambah Singkatan Baru
+            </button>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="relative">
+            <i class="ph ph-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-lg"></i>
+            <input 
+              type="text" 
+              id="term-search-input" 
+              placeholder="Cari kode singkatan (contoh: s.2.dd, p.r.n., d.t.d., a.c.)..." 
+              class="w-full pl-10 pr-4 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 text-sm"
+            >
+          </div>
+
+          <!-- Terms Table -->
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs border-collapse">
+              <thead>
+                <tr class="border-b border-slate-200 bg-slate-50 text-slate-600 uppercase font-semibold">
+                  <th class="py-2.5 px-3">Singkatan</th>
+                  <th class="py-2.5 px-3">Kepanjangan Latin</th>
+                  <th class="py-2.5 px-3">Arti / Terjemahan</th>
+                  <th class="py-2.5 px-3">Kategori</th>
+                  <th class="py-2.5 px-3">Contoh Penggunaan</th>
+                </tr>
+              </thead>
+              <tbody id="terms-table-body" class="divide-y divide-slate-100 font-mono">
+                <!-- Rendered by app.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUB-PANEL 3: FIREBASE HOSTING STATUS (Moved into Settings) -->
+      <div id="settings-panel-firebase" class="hidden space-y-6">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 space-y-6">
+          <div class="border-b border-slate-100 pb-4">
+            <div class="flex items-center space-x-2">
+              <i class="ph-bold ph-cloud-check text-amber-500 text-2xl"></i>
+              <h2 class="text-xl font-bold text-slate-900">Integrasi & Firebase Hosting</h2>
+            </div>
+            <p class="text-xs text-slate-500 mt-1">Konfigurasi project Firebase <code class="bg-slate-100 px-1.5 py-0.5 rounded text-teal-800 font-semibold font-mono">katalog-obathewan</code> dan panduan deployment.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Firebase Project Info -->
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+              <h3 class="text-sm font-bold text-slate-800 flex items-center gap-1.5">
+                <i class="ph-bold ph-gear text-teal-600"></i> Detail Konfigurasi Project
+              </h3>
+              <ul class="text-xs space-y-2 text-slate-600">
+                <li><span class="font-semibold text-slate-800">Project ID:</span> <span class="font-mono text-teal-700 font-bold">katalog-obathewan</span></li>
+                <li><span class="font-semibold text-slate-800">Hosting Default Domain:</span> <a href="https://katalog-obathewan.web.app" target="_blank" class="font-mono text-teal-600 hover:underline">katalog-obathewan.web.app</a></li>
+                <li><span class="font-semibold text-slate-800">Firebase Agent Skills:</span> <span class="text-emerald-700 font-medium">Installed in .agents/skills/</span></li>
+                <li><span class="font-semibold text-slate-800">Public Directory:</span> <code class="font-mono bg-white px-1 py-0.5 rounded border border-slate-200">public/</code></li>
+              </ul>
+            </div>
+
+            <!-- Deploy Commands -->
+            <div class="p-5 rounded-2xl bg-slate-900 text-white space-y-3">
+              <h3 class="text-sm font-bold text-teal-400 flex items-center gap-1.5">
+                <i class="ph-bold ph-terminal-window"></i> Perintah Deploy Firebase CLI
+              </h3>
+              <div class="text-xs font-mono bg-slate-950 p-3 rounded-xl border border-slate-800 space-y-2 text-slate-300">
+                <p class="text-slate-500"># 1. Login ke akun Firebase</p>
+                <p class="text-emerald-400">npx -y firebase-tools@latest login</p>
+                <p class="text-slate-500"># 2. Deploy ke Firebase Hosting</p>
+                <p class="text-emerald-400">npx -y firebase-tools@latest deploy --only hosting --project katalog-obathewan</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- 6. OBAT HEWAN INDONESIA (FORMULARIUM VETERINER INDONESIA)       -->
+    <!-- Berdasarkan formularium_lengkap.json (434 INN & One Health)    -->
+    <!-- ============================================================== -->
+    <section id="section-indo" class="hidden space-y-6">
+      <!-- Indonesian Section Header Banner -->
+      <div class="relative overflow-hidden bg-gradient-to-r from-rose-900 via-rose-800 to-slate-900 rounded-3xl p-6 sm:p-8 text-white shadow-lg border border-rose-700/50">
+        <!-- Background decorative flags/accents -->
+        <div class="absolute -right-8 -bottom-8 w-64 h-64 bg-rose-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute right-6 top-6 opacity-10 text-8xl font-black pointer-events-none select-none">
+          ðŸ‡®ðŸ‡©
+        </div>
+
+        <div class="relative z-10 max-w-3xl space-y-3">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/20 text-rose-200 border border-rose-400/30 text-xs font-bold tracking-wide">
+            <span>ðŸ‡®ðŸ‡©</span>
+            <span>FORMULARIUM NASIONAL VETERINER INDONESIA</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            <span class="text-emerald-300 font-semibold">434 Entri INN Terverifikasi</span>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-white leading-tight">
+            Katalog Obat Hewan Indonesia &amp; Regulasi Klinis (EBVM)
+          </h2>
+
+          <p class="text-xs sm:text-sm text-rose-100/90 leading-relaxed">
+            Standar Pelayanan Medis Veteriner Berbasis Bukti Ilmiah (<em>Evidence-Based Veterinary Medicine</em>), Pedoman Restriksi <em>One Health</em>, <em>Negative List</em> Ternak Pangan, serta Pengawasan Khusus Prekursor Farmasi &amp; Obat-Obat Tertentu (OOT) sesuai Regulasi BPOM.
+          </p>
+
+          <!-- Key Metrics Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2">
+            <div class="p-2.5 rounded-xl bg-white/10 backdrop-blur-xs border border-white/10">
+              <span class="text-[10px] text-rose-200 block uppercase font-semibold">Total Molekul</span>
+              <span class="text-lg font-black text-white">434 INN</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-white/10 backdrop-blur-xs border border-white/10">
+              <span class="text-[10px] text-rose-200 block uppercase font-semibold">Kelas Terapi</span>
+              <span class="text-lg font-black text-white">27 Golongan</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-white/10 backdrop-blur-xs border border-white/10">
+              <span class="text-[10px] text-rose-200 block uppercase font-semibold">Pedoman Residu</span>
+              <span class="text-lg font-black text-amber-300">Negative List</span>
+            </div>
+            <div class="p-2.5 rounded-xl bg-white/10 backdrop-blur-xs border border-white/10">
+              <span class="text-[10px] text-rose-200 block uppercase font-semibold">Pengawasan BPOM</span>
+              <span class="text-lg font-black text-emerald-300">Prekursor &amp; OOT</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Sub-Tabs within Indonesian Section -->
+      <div class="flex items-center gap-2 border-b border-slate-200 pb-2 overflow-x-auto no-scrollbar touch-scroll">
+        <button 
+          type="button" 
+          id="indo-subtab-catalog" 
+          class="shrink-0 px-4 py-2 rounded-xl bg-rose-600 text-white font-semibold text-xs flex items-center gap-2 shadow-sm transition whitespace-nowrap"
+        >
+          <i class="ph-bold ph-pill text-base"></i>
+          <span>Katalog Obat Indonesia (434 INN)</span>
+        </button>
+        <button 
+          type="button" 
+          id="indo-subtab-prohibited" 
+          class="shrink-0 px-4 py-2 rounded-xl bg-white hover:bg-slate-100 text-slate-700 font-semibold text-xs flex items-center gap-2 border border-slate-200 transition whitespace-nowrap"
+        >
+          <i class="ph-bold ph-prohibit text-base text-rose-600"></i>
+          <span>Daftar Obat Dilarang (Negative List)</span>
+        </button>
+        <button 
+          type="button" 
+          id="indo-subtab-surveillance" 
+          class="shrink-0 px-4 py-2 rounded-xl bg-white hover:bg-slate-100 text-slate-700 font-semibold text-xs flex items-center gap-2 border border-slate-200 transition whitespace-nowrap"
+        >
+          <i class="ph-bold ph-shield-warning text-base text-amber-600"></i>
+          <span>Pengawasan Khusus Prekursor &amp; OOT (BPOM)</span>
+        </button>
+        <button 
+          type="button" 
+          id="indo-subtab-standards" 
+          class="shrink-0 px-4 py-2 rounded-xl bg-white hover:bg-slate-100 text-slate-700 font-semibold text-xs flex items-center gap-2 border border-slate-200 transition whitespace-nowrap"
+        >
+          <i class="ph-bold ph-file-text text-base text-teal-600"></i>
+          <span>Standar Penulisan Resep Dokter Hewan</span>
+        </button>
+      </div>
+
+      <!-- PANE 1: KATALOG OBAT INDONESIA -->
+      <div id="indo-pane-catalog" class="space-y-6">
+        <!-- Search & Advanced Filter Controls -->
+        <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200 space-y-4">
+          <div class="flex flex-col lg:flex-row gap-3 justify-between items-stretch lg:items-center">
+            <!-- Search bar -->
+            <div class="relative flex-1">
+              <i class="ph ph-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xl"></i>
+              <input 
+                type="text" 
+                id="indo-drug-search" 
+                placeholder="Cari zat aktif INN, kelas terapi, indikasi, atau bentuk sediaan (misal: Fentanil, Tramadol, Amoksisilin)..." 
+                class="w-full pl-11 pr-10 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:border-rose-500 text-sm"
+              >
+              <button type="button" id="indo-drug-search-clear" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-sm">
+                <i class="ph-bold ph-x"></i>
+              </button>
+            </div>
+
+            <!-- Total count badge -->
+            <div class="flex items-center justify-between lg:justify-end gap-2 text-xs text-slate-500">
+              <span class="font-bold text-rose-800 bg-rose-50 px-3 py-1 rounded-full border border-rose-200 shadow-2xs" id="indo-drug-count-badge">
+                434 Obat Tersedia
+              </span>
+              <button type="button" id="indo-btn-reset-filters" class="text-xs text-rose-600 hover:text-rose-800 font-semibold flex items-center gap-1 transition px-2 py-1">
+                <i class="ph-bold ph-arrow-counter-clockwise"></i> Reset Filter
+              </button>
+            </div>
+          </div>
+
+          <!-- Filter Dropdowns Row -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1 border-t border-slate-100 text-xs">
+            <!-- Class Filter -->
+            <div>
+              <label for="indo-filter-class" class="block font-bold text-slate-700 mb-1">Kelas Terapi Mayor</label>
+              <select id="indo-filter-class" class="w-full py-2 px-3 rounded-xl border border-slate-300 bg-white font-medium text-slate-800 focus:ring-2 focus:ring-rose-500">
+                <option value="all">Semua Kelas Terapi (27)</option>
+              </select>
+            </div>
+
+            <!-- Species Filter -->
+            <div>
+              <label for="indo-filter-species" class="block font-bold text-slate-700 mb-1">Spesies Sasaran</label>
+              <select id="indo-filter-species" class="w-full py-2 px-3 rounded-xl border border-slate-300 bg-white font-medium text-slate-800 focus:ring-2 focus:ring-rose-500">
+                <option value="all">Semua Spesies Sasaran</option>
+                <option value="canine">ðŸ• Anjing (Canine)</option>
+                <option value="feline">ðŸˆ Kucing (Feline)</option>
+                <option value="equine">ðŸŽ Kuda (Equine)</option>
+                <option value="bovine">ðŸ„ Sapi / Ruminansia Besar</option>
+                <option value="ovine_caprine">ðŸ Kambing / Domba</option>
+                <option value="porcine">ðŸ– Babi (Porcine)</option>
+                <option value="avian">ðŸ“ Unggas / Burung</option>
+                <option value="rabbit">ðŸ‡ Kelinci</option>
+                <option value="exotic">ðŸ¦Œ Satwa Liar / Eksotik (Rusa, Kancil)</option>
+              </select>
+            </div>
+
+            <!-- Access Category Filter -->
+            <div>
+              <label for="indo-filter-access" class="block font-bold text-slate-700 mb-1">Kategori Regulasi &amp; Akses</label>
+              <select id="indo-filter-access" class="w-full py-2 px-3 rounded-xl border border-slate-300 bg-white font-medium text-slate-800 focus:ring-2 focus:ring-rose-500">
+                <option value="all">Semua Kategori Akses</option>
+                <option value="narkotika">ðŸ”´ Resep Narkotika (Cap &amp; SIP Drh)</option>
+                <option value="psikotropika">ðŸŸ  Resep Psikotropika</option>
+                <option value="prekursor_oot">ðŸŸ¡ Prekursor Farmasi &amp; OOT (BPOM)</option>
+                <option value="keras">ðŸ”µ Obat Keras Dokter Hewan</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drugs Grid Container -->
+        <div id="indo-drugs-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="indo-drugs-empty" class="hidden p-12 text-center bg-white rounded-2xl border border-slate-200">
+          <div class="w-16 h-16 mx-auto rounded-full bg-rose-50 flex items-center justify-center text-rose-500 text-3xl mb-3">
+            <i class="ph-bold ph-magnifying-glass"></i>
+          </div>
+          <h4 class="text-base font-bold text-slate-800">Tidak ada obat yang cocok</h4>
+          <p class="text-xs text-slate-500 max-w-md mx-auto mt-1">Coba gunakan kata kunci pencarian yang lebih umum atau reset filter kelas dan spesies sasaran.</p>
+        </div>
+
+        <!-- Pagination Controls -->
+        <div id="indo-pagination" class="flex items-center justify-between p-4 bg-white rounded-2xl border border-slate-200">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- PANE 2: DAFTAR OBAT DILARANG (NEGATIVE LIST) -->
+      <div id="indo-pane-prohibited" class="hidden space-y-6">
+        <div class="bg-rose-50 border border-rose-200 rounded-2xl p-6">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-rose-600 text-white flex items-center justify-center shrink-0 text-2xl shadow-sm">
+              <i class="ph-bold ph-prohibit"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-rose-950">Pedoman Tata Kelola &amp; Daftar Negatif (Prohibited Substances)</h3>
+              <p class="text-xs text-rose-900 mt-1 leading-relaxed">
+                Berdasarkan standar keamanan <strong>One Health</strong>, pencegahan resistensi antimikroba (AMR), dan perlindungan keamanan pangan (<em>Kesmavet</em>). Zat-zat berikut <strong>DILARANG KERAS</strong> digunakan pada hewan ternak penghasil pangan (<em>food-producing animals</em>) karena dampak residu fatal pada manusia.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table Prohibited -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-50 border-b border-slate-200 text-slate-700 font-bold uppercase text-[11px] tracking-wider">
+                <tr>
+                  <th class="p-4">Golongan / Molekul</th>
+                  <th class="p-4">Alasan Pelarangan Medis</th>
+                  <th class="p-4">Dampak Residu / Risiko Kesmavet</th>
+                  <th class="p-4">Rujukan Regulasi Internasional</th>
+                </tr>
+              </thead>
+              <tbody id="table-indo-prohibited-body" class="divide-y divide-slate-100">
+                <!-- Populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 3: PENGAWASAN KHUSUS (PREKURSOR & OOT BPOM) -->
+      <div id="indo-pane-surveillance" class="hidden space-y-6">
+        <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-600 text-white flex items-center justify-center shrink-0 text-2xl shadow-sm">
+              <i class="ph-bold ph-shield-warning"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-amber-950">Daftar Obat Pengawasan Khusus: Prekursor Farmasi &amp; Obat-Obat Tertentu (OOT)</h3>
+              <p class="text-xs text-amber-900 mt-1 leading-relaxed">
+                Sesuai <strong>Peraturan BPOM No. 10 Tahun 2019</strong> dan regulasi pengelolaan Prekursor Farmasi. Obat-obat ini hanya boleh diserahkan dengan resep dokter hewan, wajib disimpan di lemari terkunci khusus/terpisah, dicatat dalam kartu stok, dan dilaporkan secara berkala. Resep <strong>tidak boleh diulang (<em>iter</em>)</strong> tanpa resep baru.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table Surveillance -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-50 border-b border-slate-200 text-slate-700 font-bold uppercase text-[11px] tracking-wider">
+                <tr>
+                  <th class="p-4">Kategori Regulasi</th>
+                  <th class="p-4">Zat Aktif &amp; Status di Draf</th>
+                  <th class="p-4">Ketentuan Pengelolaan Klinik</th>
+                  <th class="p-4">Dasar Hukum Regulasi BPOM</th>
+                </tr>
+              </thead>
+              <tbody id="table-indo-surveillance-body" class="divide-y divide-slate-100">
+                <!-- Populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 4: STANDAR PENULISAN RESEP DOKTER HEWAN -->
+      <div id="indo-pane-standards" class="hidden space-y-6">
+        <div class="bg-teal-50 border border-teal-200 rounded-2xl p-6">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-teal-700 text-white flex items-center justify-center shrink-0 text-2xl shadow-sm">
+              <i class="ph-bold ph-receipt"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-teal-950">Standar Minimum Kelengkapan Resep Dokter Hewan untuk Obat Manusia</h3>
+              <p class="text-xs text-teal-900 mt-1 leading-relaxed">
+                Ketika dokter hewan meresepkan sediaan obat manusia untuk kebutuhan hewan (<em>extra-label / cascade use</em>), resep harus memenuhi kaidah kelengkapan hukum farmasi agar dapat dilayani dan divalidasi oleh apotek pengelola.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="cards-indo-standards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+  </div> <!-- /#app-root -->
+
+  <!-- ========================================== -->
+  <!-- MODALS                                     -->
+
+  <!-- 1. "Learn More" Comprehensive Drug Monograph Modal (Dual Source BSAVA & Plumb's) -->
+  <div id="modal-learn-more" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-3 sm:p-4">
+    <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden border border-slate-200">
+      <!-- Modal Header -->
+      <div class="p-5 bg-teal-800 text-white flex items-center justify-between gap-3">
+        <div>
+          <span id="modal-drug-class" class="text-xs uppercase font-semibold text-teal-200 tracking-wider">Drug Class</span>
+          <h3 id="modal-drug-name" class="text-2xl font-bold mt-0.5">Amoxicillin</h3>
+          <p id="modal-drug-brands" class="text-xs text-teal-100">Merk dagang: Amoxil, Bimoxyl</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <!-- Modal Language Switcher -->
+          <div class="flex items-center bg-teal-900/80 p-0.5 rounded-lg border border-teal-700 text-xs font-semibold">
+            <button type="button" id="modal-btn-lang-id" class="px-2 py-1 rounded bg-teal-600 text-white font-bold transition">ðŸ‡®ðŸ‡© ID</button>
+            <button type="button" id="modal-btn-lang-en" class="px-2 py-1 rounded text-teal-200 hover:text-white transition">ðŸ‡¬ðŸ‡§ EN</button>
+          </div>
+          <button id="btn-close-learn-more" class="w-8 h-8 rounded-full bg-teal-900/60 hover:bg-teal-900 flex items-center justify-center text-white transition">
+            <i class="ph ph-x text-lg"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Source Reference Switcher Bar (BSAVA / Plumb's / Bandingkan Keduanya) -->
+      <div class="px-5 py-2.5 bg-slate-100 border-b border-slate-200 flex flex-wrap items-center justify-between gap-2 text-xs">
+        <div class="flex items-center gap-1.5 font-semibold text-slate-700">
+          <i class="ph-bold ph-books text-base text-teal-700"></i>
+          <span>Sumber Monograf:</span>
+          <span id="modal-source-badge-info" class="text-[11px] font-normal text-slate-500"></span>
+        </div>
+        <div class="flex items-center gap-1 bg-white p-1 rounded-xl border border-slate-300 shadow-inner">
+          <button type="button" id="modal-tab-bsava" class="modal-source-tab px-3 py-1.5 rounded-lg font-semibold transition flex items-center gap-1.5 text-xs bg-teal-600 text-white shadow-xs">
+            <i class="ph-bold ph-book-open"></i>
+            <span>BSAVA Formulary</span>
+          </button>
+          <button type="button" id="modal-tab-plumbs" class="modal-source-tab px-3 py-1.5 rounded-lg font-medium text-slate-700 hover:bg-slate-100 transition flex items-center gap-1.5 text-xs">
+            <i class="ph-bold ph-book-bookmark"></i>
+            <span>Plumb's Handbook</span>
+          </button>
+          <button type="button" id="modal-tab-compare" class="modal-source-tab px-3 py-1.5 rounded-lg font-medium text-slate-700 hover:bg-slate-100 transition flex items-center gap-1.5 text-xs">
+            <i class="ph-bold ph-scales"></i>
+            <span>Bandingkan Keduanya</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 overflow-y-auto space-y-5 text-sm">
+
+        <!-- ============================================ -->
+        <!-- PANE 1: BSAVA SMALL ANIMAL FORMULARY VIEW    -->
+        <!-- ============================================ -->
+        <div id="modal-pane-bsava" class="space-y-5">
+          <div class="p-3 bg-sky-50 border border-sky-200 rounded-xl flex items-center justify-between text-xs text-sky-900">
+            <span class="flex items-center gap-1.5 font-semibold">
+              <i class="ph-bold ph-book-open text-sky-700 text-base"></i>
+              <span>BSAVA Small Animal Formulary (Part A: Canine & Feline, 10th Edition)</span>
+            </span>
+            <span class="text-[11px] text-sky-700">Standar Asosiasi Veteriner Inggris / Eropa</span>
+          </div>
+
+          <div>
+            <h4 id="modal-hdr-moa" class="font-bold text-teal-900 flex items-center gap-1.5">
+              <i class="ph-bold ph-atom"></i> Mekanisme Aksi (Mechanism of Action)
+            </h4>
+            <p id="modal-moa" class="text-slate-700 mt-1 leading-relaxed text-xs"></p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-teal-50/60 border border-teal-100">
+              <h4 id="modal-hdr-indications" class="font-bold text-teal-900 text-xs flex items-center gap-1.5">
+                <i class="ph-bold ph-stethoscope"></i> Indikasi Klinis
+              </h4>
+              <p id="modal-indications" class="text-slate-700 mt-1 leading-relaxed text-xs"></p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-rose-50/60 border border-rose-100">
+              <h4 id="modal-hdr-contraindications" class="font-bold text-rose-900 text-xs flex items-center gap-1.5">
+                <i class="ph-bold ph-warning-octagon"></i> Kontraindikasi & Peringatan
+              </h4>
+              <p id="modal-contraindications" class="text-rose-950 mt-1 leading-relaxed text-xs"></p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h4 id="modal-hdr-pharmacokinetics" class="font-bold text-slate-800 text-xs flex items-center gap-1.5">
+                <i class="ph-bold ph-arrows-split"></i> Farmakokinetika
+              </h4>
+              <p id="modal-pharmacokinetics" class="text-slate-600 mt-1 leading-relaxed text-xs"></p>
+            </div>
+
+            <div>
+              <h4 id="modal-hdr-pharmacodynamics" class="font-bold text-slate-800 text-xs flex items-center gap-1.5">
+                <i class="ph-bold ph-chart-line-up"></i> Farmakodinamika
+              </h4>
+              <p id="modal-pharmacodynamics" class="text-slate-600 mt-1 leading-relaxed text-xs"></p>
+            </div>
+          </div>
+
+          <div>
+            <h4 id="modal-hdr-interactions" class="font-bold text-slate-800 text-xs flex items-center gap-1.5">
+              <i class="ph-bold ph-arrows-clockwise"></i> Interaksi Obat Penting
+            </h4>
+            <p id="modal-interactions" class="text-slate-600 mt-1 leading-relaxed text-xs"></p>
+          </div>
+
+          <!-- Antimicrobial Stewardship Intelligence -->
+          <div id="modal-antimicrobial-section" class="hidden p-4 rounded-xl border border-teal-200 bg-teal-50/50 space-y-3">
+            <!-- Dynamically populated if drug is antimicrobial -->
+          </div>
+
+          <!-- Comprehensive Details / Counseling & Monitoring -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+            <h4 id="modal-hdr-special-instructions" class="font-bold text-slate-900 text-xs uppercase tracking-wider text-teal-800">Petunjuk Khusus & Pemantauan</h4>
+            <div class="text-xs space-y-2 text-slate-700">
+              <div><span id="modal-lbl-counseling" class="font-semibold text-slate-900">Konseling Klien / Administrasi:</span> <span id="modal-counseling"></span></div>
+              <div><span id="modal-lbl-monitoring" class="font-semibold text-slate-900">Parameter Monitoring Lab:</span> <span id="modal-monitoring"></span></div>
+              <div><span id="modal-lbl-overdose" class="font-semibold text-slate-900">Manajemen Toksisitas / Overdosis:</span> <span id="modal-overdose"></span></div>
+              <div><span id="modal-lbl-storage" class="font-semibold text-slate-900">Penyimpanan:</span> <span id="modal-storage"></span></div>
+              <div><span id="modal-lbl-references" class="font-semibold text-slate-900">Referensi:</span> <span id="modal-references" class="italic text-teal-700"></span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- PANE 2: PLUMB'S VETERINARY DRUG HANDBOOK     -->
+        <!-- ============================================ -->
+        <div id="modal-pane-plumbs" class="hidden space-y-5">
+          <div class="p-3 bg-amber-50 border border-amber-200 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-amber-900">
+            <span class="flex items-center gap-1.5 font-semibold">
+              <i class="ph-bold ph-book-bookmark text-amber-700 text-base"></i>
+              <span>Plumb's Veterinary Drug Handbook (7th Edition by Donald C. Plumb, Pharm.D.)</span>
+            </span>
+            <div class="flex items-center gap-2">
+              <div class="flex items-center bg-white p-0.5 rounded-lg border border-amber-300 text-[11px] font-semibold shadow-xs">
+                <button type="button" id="modal-plumbs-btn-id" class="px-2 py-0.5 rounded bg-amber-700 text-white font-bold transition">ðŸ‡®ðŸ‡© ID</button>
+                <button type="button" id="modal-plumbs-btn-en" class="px-2 py-0.5 rounded text-amber-800 hover:text-amber-950 transition">ðŸ‡¬ðŸ‡§ EN</button>
+              </div>
+              <span id="modal-plumbs-page-tag" class="text-[11px] font-mono text-amber-800 font-semibold"></span>
+            </div>
+          </div>
+
+          <!-- Prescriber Highlights (Plumb's Core Feature) -->
+          <div id="modal-plumbs-highlights-box" class="p-4 bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent border-l-4 border-amber-500 rounded-r-xl space-y-2">
+            <h4 class="font-bold text-amber-950 text-xs uppercase tracking-wider flex items-center gap-1.5">
+              <i class="ph-bold ph-star text-amber-600 text-sm"></i>
+              <span>Prescriber Highlights (Poin Klinis Utama Plumb's)</span>
+            </h4>
+            <ul id="modal-plumbs-highlights-list" class="list-disc list-inside space-y-1.5 text-xs text-slate-800 leading-relaxed">
+            </ul>
+          </div>
+
+          <!-- Indications & Uses -->
+          <div class="p-4 rounded-xl bg-teal-50/60 border border-teal-100">
+            <h4 class="font-bold text-teal-900 text-xs flex items-center gap-1.5">
+              <i class="ph-bold ph-stethoscope"></i> Indikasi & Penggunaan Klinis (Plumb's Uses)
+            </h4>
+            <p id="modal-plumbs-indications" class="text-slate-700 mt-1 leading-relaxed text-xs"></p>
+          </div>
+
+          <!-- Contraindications & Adverse Effects -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-rose-50/60 border border-rose-100">
+              <h4 class="font-bold text-rose-900 text-xs flex items-center gap-1.5">
+                <i class="ph-bold ph-warning-octagon"></i> Kontraindikasi & Peringatan Keamanan
+              </h4>
+              <p id="modal-plumbs-contraindications" class="text-rose-950 mt-1 leading-relaxed text-xs"></p>
+              <div id="modal-plumbs-repro-box" class="mt-2 pt-2 border-t border-rose-200/60 hidden">
+                <span class="font-semibold text-rose-900 text-[11px]">Kehamilan & Laktasi:</span>
+                <p id="modal-plumbs-repro" class="text-rose-900 text-xs mt-0.5"></p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-amber-50/60 border border-amber-200">
+              <h4 class="font-bold text-amber-900 text-xs flex items-center gap-1.5">
+                <i class="ph-bold ph-first-aid"></i> Efek Samping & Toksisitas (Adverse Effects)
+              </h4>
+              <p id="modal-plumbs-adverse" class="text-amber-950 mt-1 leading-relaxed text-xs"></p>
+              <div id="modal-plumbs-overdose-box" class="mt-2 pt-2 border-t border-amber-200/60 hidden">
+                <span class="font-semibold text-amber-900 text-[11px]">Overdosis / Toksisitas Akut:</span>
+                <p id="modal-plumbs-overdose" class="text-amber-900 text-xs mt-0.5"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pharmacokinetics & Pharmacodynamics -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h4 class="font-bold text-slate-800 text-xs flex items-center gap-1.5">
+                <i class="ph-bold ph-arrows-split"></i> Farmakokinetika (Pharmacokinetics)
+              </h4>
+              <p id="modal-plumbs-pk" class="text-slate-600 mt-1 leading-relaxed text-xs"></p>
+            </div>
+            <div>
+              <h4 class="font-bold text-slate-800 text-xs flex items-center gap-1.5">
+                <i class="ph-bold ph-chart-line-up"></i> Farmakodinamika (Pharmacodynamics)
+              </h4>
+              <p id="modal-plumbs-pd" class="text-slate-600 mt-1 leading-relaxed text-xs"></p>
+            </div>
+          </div>
+
+          <!-- Drug Interactions -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <h4 class="font-bold text-slate-900 text-xs flex items-center gap-1.5">
+              <i class="ph-bold ph-arrows-clockwise"></i> Interaksi Obat Terperinci (Plumb's Drug Interactions)
+            </h4>
+            <p id="modal-plumbs-interactions-note" class="text-xs text-slate-600 italic"></p>
+            <div id="modal-plumbs-interactions-list" class="space-y-1.5 mt-2"></div>
+          </div>
+
+          <!-- Doses by Species (Plumb's Comprehensive Clinical Regimens) -->
+          <div class="p-4 rounded-xl bg-teal-50/40 border border-teal-200 space-y-2.5">
+            <h4 class="font-bold text-teal-900 text-xs flex items-center gap-1.5">
+              <i class="ph-bold ph-calculator"></i> Rekomendasi Dosis Spesifik Spesies (Plumb's Doses)
+            </h4>
+            <div id="modal-plumbs-doses-container" class="space-y-3"></div>
+          </div>
+
+          <!-- Client Information, Storage & Chemistry -->
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-3 text-xs">
+            <h4 class="font-bold text-slate-900 text-xs uppercase tracking-wider text-teal-800">Informasi Klien, Stabilitas & Bentuk Sediaan</h4>
+            <div class="space-y-2 text-slate-700">
+              <div><span class="font-semibold text-slate-900">Edukasi & Instruksi Klien:</span> <span id="modal-plumbs-client-info"></span></div>
+              <div><span class="font-semibold text-slate-900">Pemantauan & Evaluasi Lab:</span> <span id="modal-plumbs-monitoring"></span></div>
+              <div><span class="font-semibold text-slate-900">Penyimpanan & Stabilitas:</span> <span id="modal-plumbs-storage"></span></div>
+              <div><span class="font-semibold text-slate-900">Bentuk Sediaan Terdaftar:</span> <span id="modal-plumbs-forms"></span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- PANE 3: SIDE-BY-SIDE COMPARISON VIEW         -->
+        <!-- ============================================ -->
+        <div id="modal-pane-compare" class="hidden space-y-4">
+          <div class="p-3.5 bg-gradient-to-r from-teal-800 to-slate-800 text-white rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-2 shadow-xs">
+            <div class="flex items-center gap-2">
+              <i class="ph-bold ph-scales text-xl text-amber-400"></i>
+              <div>
+                <h4 class="font-bold text-sm">Komparasi Klinis: BSAVA Formulary vs. Plumb's Handbook</h4>
+                <p class="text-[11px] text-teal-200">Perbandingan langsung panduan terapi veteriner Inggris/Eropa dan Amerika/Internasional.</p>
+              </div>
+            </div>
+            <span class="text-[11px] bg-teal-700/80 px-2.5 py-1 rounded-lg border border-teal-500 font-mono self-start sm:self-auto">2 Referensi Resmi</span>
+          </div>
+
+          <!-- Comparison Table / Grid -->
+          <div class="space-y-4" id="modal-compare-grid">
+            <!-- Dynamically populated by app.js with side-by-side rows -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 bg-slate-50 border-t border-slate-200 flex justify-end space-x-3">
+        <button id="btn-modal-calc-dose" class="px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold text-xs flex items-center gap-1.5 transition">
+          <i class="ph-bold ph-calculator"></i> <span id="modal-btn-calc-text">Buka di Kalkulator Dosis</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: View Prescription Detail from History -->
+  <div id="modal-history-detail" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden border border-slate-200">
+      <!-- Modal Header -->
+      <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50">
+        <div class="flex items-center gap-2">
+          <i class="ph-bold ph-receipt text-teal-600 text-xl"></i>
+          <div>
+            <h3 class="font-bold text-slate-900 text-sm">Lembar Resep Formal Veteriner</h3>
+            <p id="modal-history-subtitle" class="text-[11px] text-slate-500 font-mono">No. Resep: RX-XXXX</p>
+          </div>
+        </div>
+        <button id="btn-close-history-modal" class="text-slate-400 hover:text-slate-700 transition">
+          <i class="ph-bold ph-x text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body (Prescription Paper Slip) -->
+      <div class="p-6 overflow-y-auto flex-1 bg-slate-100/40">
+        <div id="modal-history-paper-content" class="prescription-slip border-2 border-slate-800 rounded-xl p-6 bg-white font-serif text-slate-900 space-y-4 shadow-sm">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-6 py-3.5 bg-slate-50 border-t border-slate-200 flex justify-between items-center text-xs">
+        <button id="btn-modal-history-copy" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold flex items-center gap-1.5 transition">
+          <i class="ph ph-copy"></i> Salin Teks
+        </button>
+        <div class="flex items-center gap-2">
+          <button id="btn-modal-history-close" class="px-4 py-2 rounded-xl border border-slate-300 text-slate-600 hover:bg-slate-100 font-semibold transition">
+            Tutup
+          </button>
+          <button id="btn-modal-history-print" class="px-4 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold flex items-center gap-1.5 shadow-sm transition">
+            <i class="ph-bold ph-printer text-base"></i> Cetak Lembar Resep
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Tambah & Edit Template Obat -->
+  <div id="modal-template-editor" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden border border-slate-200">
+      <!-- Modal Header -->
+      <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-teal-800 text-white">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-teal-700 flex items-center justify-center">
+            <i class="ph-bold ph-lightning text-amber-300 text-lg"></i>
+          </div>
+          <div>
+            <h3 id="tpl-modal-heading" class="font-bold text-base">Tambah Template Obat Baru</h3>
+            <p class="text-xs text-teal-200 font-medium">Simpan racikan atau dosis klinis ke database template lokal</p>
+          </div>
+        </div>
+        <button type="button" id="btn-close-tpl-modal" class="text-teal-200 hover:text-white transition">
+          <i class="ph-bold ph-x text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body Form -->
+      <form id="form-template-editor" class="p-6 overflow-y-auto flex-1 space-y-4 text-xs">
+        <input type="hidden" id="tpl-input-id" value="">
+
+        <!-- Basic Info -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="sm:col-span-2">
+            <label for="tpl-input-title" class="block font-bold text-slate-700 mb-1">Nama Kasus / Judul Template <span class="text-rose-500">*</span></label>
+            <input type="text" id="tpl-input-title" required placeholder="Contoh: ðŸ± Flu Kucing: Racikan Kapsul DTD" class="w-full py-2 px-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 font-semibold text-slate-900">
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="tpl-input-subtitle" class="block font-bold text-slate-700 mb-1">Subtitle / Ringkasan Zat Aktif</label>
+            <input type="text" id="tpl-input-subtitle" placeholder="Contoh: Doxycycline + Bromhexine + CTM (da in caps. DTD)" class="w-full py-2 px-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 text-slate-800">
+          </div>
+
+          <div class="sm:col-span-2">
+            <label for="tpl-input-desc" class="block font-bold text-slate-700 mb-1">Deskripsi Kasus & Indikasi</label>
+            <textarea id="tpl-input-desc" rows="2" placeholder="Contoh: Infeksi saluran pernapasan atas pada kucing dengan sekret hidung kental..." class="w-full py-2 px-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-500 text-slate-800"></textarea>
+          </div>
+
+          <div>
+            <label for="tpl-input-species" class="block font-bold text-slate-700 mb-1">Spesies Target <span class="text-rose-500">*</span></label>
+            <select id="tpl-input-species" required class="w-full py-2 px-3 rounded-xl border border-slate-300 bg-white font-semibold text-slate-800">
+              <option value="feline">ðŸ± Kucing (Feline)</option>
+              <option value="canine">ðŸ¶ Anjing (Canine)</option>
+              <option value="bovine">ðŸ„ Sapi / Ruminansia (Bovine)</option>
+              <option value="equine">ðŸ´ Kuda (Equine)</option>
+              <option value="exotic">ðŸ° Kelinci / Eksotik (Exotic)</option>
+              <option value="avian">ðŸ¦œ Unggas (Avian)</option>
+              <option value="clinic">ðŸ©º Stok Klinik Mandiri drh</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="tpl-input-weight" class="block font-bold text-slate-700 mb-1">Bobot Badan Acuan (kg)</label>
+            <input type="number" id="tpl-input-weight" step="0.05" min="0" value="4" class="w-full py-2 px-3 rounded-xl border border-slate-300 font-bold text-slate-900">
+          </div>
+
+          <div>
+            <label for="tpl-input-patient-name" class="block font-bold text-slate-700 mb-1">Nama Pasien Acuan</label>
+            <input type="text" id="tpl-input-patient-name" placeholder="Contoh: Momo" class="w-full py-2 px-3 rounded-xl border border-slate-300 text-slate-800">
+          </div>
+
+          <div>
+            <label for="tpl-input-patient-breed" class="block font-bold text-slate-700 mb-1">Ras / Breed Pasien</label>
+            <input type="text" id="tpl-input-patient-breed" placeholder="Contoh: Domestik / Golden Retriever" class="w-full py-2 px-3 rounded-xl border border-slate-300 text-slate-800">
+          </div>
+        </div>
+
+        <!-- Mode / Type Selector -->
+        <div class="pt-2 border-t border-slate-200">
+          <label for="tpl-input-type" class="block font-bold text-slate-700 mb-1">Tipe Peresepan <span class="text-rose-500">*</span></label>
+          <select id="tpl-input-type" class="w-full py-2 px-3 rounded-xl border border-slate-300 bg-white font-bold text-teal-800">
+            <option value="compounding">Racikan Pulveres / Kapsul (Compounding Desk)</option>
+            <option value="single">Obat Tunggal (Single Dose / Cair / Tetes / Injeksi)</option>
+          </select>
+        </div>
+
+        <!-- Section: Compounding fields -->
+        <div id="tpl-group-compounding" class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label for="tpl-comp-method" class="block font-bold text-slate-700 mb-1">Metode DTD</label>
+              <select id="tpl-comp-method" class="w-full py-1.5 px-2 rounded-lg border border-slate-300 bg-white font-medium">
+                <option value="dtd">Dengan d.t.d.</option>
+                <option value="nondtd">Tanpa d.t.d.</option>
+              </select>
+            </div>
+            <div>
+              <label for="tpl-comp-packaging" class="block font-bold text-slate-700 mb-1">Bentuk Kemasan</label>
+              <select id="tpl-comp-packaging" class="w-full py-1.5 px-2 rounded-lg border border-slate-300 bg-white font-medium">
+                <option value="da in caps">da in caps (Kapsul)</option>
+                <option value="da in pulv">da in pulv (Puyer)</option>
+              </select>
+            </div>
+            <div>
+              <label for="tpl-comp-total-packs" class="block font-bold text-slate-700 mb-1">Jumlah Bungkus (No.)</label>
+              <input type="number" id="tpl-comp-total-packs" value="14" min="1" class="w-full py-1.5 px-2.5 rounded-lg border border-slate-300 font-bold">
+            </div>
+          </div>
+
+          <div>
+            <label for="tpl-comp-ingredients-text" class="block font-bold text-slate-700 mb-1">
+              Daftar Bahan Racikan (1 baris per obat: Nama | DosisSekali mg | KekuatanStok mg)
+            </label>
+            <textarea id="tpl-comp-ingredients-text" rows="3" placeholder="Doxycycline | 20 | 100&#10;Bromhexine HCl | 4 | 8&#10;CTM | 1 | 4" class="w-full py-2 px-3 rounded-lg border border-slate-300 font-mono text-xs"></textarea>
+            <p class="text-[10px] text-slate-400 mt-0.5">Format: Nama Obat | Dosis Sekali (mg) | Kekuatan Tablet Stok (mg)</p>
+          </div>
+        </div>
+
+        <!-- Section: Single Dose fields -->
+        <div id="tpl-group-single" class="hidden p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label for="tpl-single-drug-name" class="block font-bold text-slate-700 mb-1">Nama Sediaan Obat</label>
+              <input type="text" id="tpl-single-drug-name" placeholder="Contoh: Amoksisilin Sirup Kering 125mg/5ml" class="w-full py-1.5 px-2.5 rounded-lg border border-slate-300">
+            </div>
+            <div>
+              <label for="tpl-single-doserate" class="block font-bold text-slate-700 mb-1">Dosis Anjuran (mg/kg)</label>
+              <input type="number" id="tpl-single-doserate" step="0.1" value="20" class="w-full py-1.5 px-2.5 rounded-lg border border-slate-300 font-bold">
+            </div>
+            <div>
+              <label for="tpl-single-freq" class="block font-bold text-slate-700 mb-1">Frekuensi Pemberian</label>
+              <select id="tpl-single-freq" class="w-full py-1.5 px-2 rounded-lg border border-slate-300 bg-white">
+                <option value="s.1.dd">s.1.dd (1x sehari)</option>
+                <option value="s.2.dd" selected>s.2.dd (2x sehari - q12h)</option>
+                <option value="s.3.dd">s.3.dd (3x sehari - q8h)</option>
+                <option value="s.i.m.m.">s.i.m.m. (Serahkan ke tangan dokter)</option>
+                <option value="s.u.d">s.u.d / s.u.e (sesuai aturan)</option>
+                <option value="s.u.c.">s.u.c. (pemakaian diketahui)</option>
+              </select>
+            </div>
+            <div>
+              <label for="tpl-single-duration" class="block font-bold text-slate-700 mb-1">Durasi Terapi (Hari)</label>
+              <input type="number" id="tpl-single-duration" value="7" min="1" class="w-full py-1.5 px-2.5 rounded-lg border border-slate-300 font-bold">
+            </div>
+          </div>
+          <div>
+            <label for="tpl-single-wdt" class="block font-bold text-slate-700 mb-1">Withdrawal Time (Ternak Pangan)</label>
+            <input type="text" id="tpl-single-wdt" placeholder="Contoh: Waktu henti susu: 72 jam..." class="w-full py-1.5 px-2.5 rounded-lg border border-slate-300">
+          </div>
+        </div>
+
+        <!-- Signa & Notes -->
+        <div>
+          <label for="tpl-input-signa" class="block font-bold text-slate-700 mb-1">Signa / Aturan Pakai Resmi <span class="text-rose-500">*</span></label>
+          <input type="text" id="tpl-input-signa" required placeholder="Contoh: s.2.dd caps. I p.c. (2x sehari 1 kapsul sesudah makan)" class="w-full py-2 px-3 rounded-xl border border-slate-300 font-semibold text-slate-800">
+        </div>
+
+        <div>
+          <label for="tpl-input-notes" class="block font-bold text-slate-700 mb-1">Catatan Tambahan & Petunjuk Khusus</label>
+          <textarea id="tpl-input-notes" rows="2" placeholder="Contoh: Berikan pakan basah setelah kapsul ditelan untuk mencegah esofagitis..." class="w-full py-2 px-3 rounded-xl border border-slate-300 text-slate-800"></textarea>
+        </div>
+
+        <!-- Modal Footer Actions -->
+        <div class="pt-3 border-t border-slate-200 flex justify-end gap-2">
+          <button type="button" id="btn-cancel-tpl-modal" class="px-4 py-2 rounded-xl border border-slate-300 text-slate-600 hover:bg-slate-100 font-semibold transition">
+            Batal
+          </button>
+          <button type="submit" id="btn-save-tpl" class="px-5 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold flex items-center gap-1.5 shadow-sm transition">
+            <i class="ph-bold ph-floppy-disk"></i> Simpan Template
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Detail Lengkap Obat Formularium Indonesia -->
+  <div id="modal-indo-detail" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4 hidden">
+    <div class="bg-white rounded-3xl max-w-3xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden border border-slate-200">
+      <!-- Modal Header -->
+      <div class="px-6 py-5 border-b border-slate-100 flex justify-between items-start bg-gradient-to-r from-rose-900 via-rose-800 to-slate-900 text-white">
+        <div class="space-y-1 pr-4">
+          <div class="flex items-center gap-2">
+            <span class="text-xs uppercase font-bold text-rose-300 tracking-wider" id="modal-indo-class">Kelas Terapi</span>
+            <span id="modal-indo-code" class="text-xs font-mono font-bold bg-white/20 px-2 py-0.5 rounded text-white"></span>
+          </div>
+          <h3 id="modal-indo-inn" class="text-2xl font-black tracking-tight text-white">Nama Generik</h3>
+          <p class="text-xs text-rose-100 flex items-center gap-1.5">
+            <i class="ph-bold ph-package"></i> Sediaan: <span id="modal-indo-formulation" class="font-bold"></span>
+          </p>
+        </div>
+        <button type="button" id="btn-close-indo-modal" class="text-rose-200 hover:text-white transition p-1 rounded-lg hover:bg-white/10">
+          <i class="ph-bold ph-x text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="p-6 overflow-y-auto flex-1 space-y-5 text-xs text-slate-700">
+        <!-- Target Species -->
+        <div>
+          <span class="font-bold text-slate-800 block mb-1 text-[11px] uppercase tracking-wider">Spesies Sasaran:</span>
+          <div id="modal-indo-species" class="flex flex-wrap gap-1.5"></div>
+        </div>
+
+        <!-- Indication -->
+        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+          <span class="font-bold text-slate-900 block mb-1 text-xs flex items-center gap-1.5">
+            <i class="ph-bold ph-heartbeat text-rose-600"></i> Indikasi Klinis Utama
+          </span>
+          <p id="modal-indo-indication" class="text-slate-700 leading-relaxed"></p>
+        </div>
+
+        <!-- Dosage Guideline -->
+        <div class="p-4 rounded-2xl bg-emerald-50/70 border border-emerald-200">
+          <span class="font-bold text-emerald-900 block mb-1 text-xs flex items-center gap-1.5">
+            <i class="ph-bold ph-scales text-emerald-700"></i> Panduan Dosis Klinis Standar
+          </span>
+          <p id="modal-indo-dosage" class="font-mono text-emerald-950 leading-relaxed whitespace-pre-line"></p>
+        </div>
+
+        <!-- Restrictions Alert Box -->
+        <div id="modal-indo-restrictions-box" class="p-4 rounded-2xl bg-amber-50 border border-amber-300 hidden">
+          <span class="font-bold text-amber-950 block mb-1 text-xs flex items-center gap-1.5">
+            <i class="ph-bold ph-warning text-amber-700 text-sm"></i> Restriksi &amp; Peringatan Keamanan
+          </span>
+          <p id="modal-indo-restrictions" class="text-amber-900 leading-relaxed whitespace-pre-line"></p>
+        </div>
+
+        <!-- Access Category Alert Box -->
+        <div id="modal-indo-access-box" class="p-3 rounded-xl bg-blue-50 border border-blue-200 hidden">
+          <span class="font-bold text-blue-950 block mb-0.5 text-xs flex items-center gap-1.5">
+            <i class="ph-bold ph-shield-check text-blue-700"></i> Kategori Regulasi &amp; Akses Apotek
+          </span>
+          <p id="modal-indo-access" class="text-blue-900"></p>
+        </div>
+
+        <!-- References & Max Rx -->
+        <div class="pt-3 border-t border-slate-200 flex flex-col sm:flex-row justify-between gap-2 text-[11px] text-slate-500">
+          <div><span class="font-bold text-slate-700">Referensi:</span> <span id="modal-indo-references"></span></div>
+          <div id="modal-indo-max-rx" class="font-bold text-rose-700"></div>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-6 py-4 border-t border-slate-100 bg-slate-50 flex items-center justify-between gap-3">
+        <button type="button" id="btn-modal-indo-close" class="px-4 py-2 rounded-xl border border-slate-300 text-slate-700 font-semibold hover:bg-slate-100 transition">
+          Tutup
+        </button>
+        <div class="flex items-center gap-2">
+          <button type="button" id="btn-modal-indo-calc" class="px-3.5 py-2 rounded-xl border border-teal-300 text-teal-800 bg-teal-50 hover:bg-teal-100 font-bold transition flex items-center gap-1.5">
+            <i class="ph-bold ph-calculator"></i> Kalkulator Dosis
+          </button>
+          <button type="button" id="btn-modal-indo-add-rx" class="px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold transition flex items-center gap-1.5 shadow-sm">
+            <i class="ph-bold ph-plus-circle"></i> + Keranjang Resep
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Print Modal Container -->
+  <div id="prescription-print-modal" class="hidden">
+    <!-- Populated during window.print() -->
+  </div>
+
+  <!-- Scripts -->
+  <!-- Firebase SDKs for Google Authentication -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+  <script type="module" src="js/app.js"></script>
+
+  <!-- PWA Offline Service Worker Registration & Status Handler -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js')
+          .then((reg) => {
+            console.log('[PWA] Service Worker aktif untuk akses offline:', reg.scope);
+          })
+          .catch((err) => {
+            console.warn('[PWA] Gagal registrasi Service Worker:', err);
+          });
+      });
+    }
+
+    function updateNetworkStatus() {
+      const badge = document.getElementById('badge-offline-status');
+      const text = document.getElementById('offline-status-text');
+      if (!badge) return;
+
+      if (navigator.onLine) {
+        badge.className = "hidden sm:inline-flex items-center gap-1.5 text-[11px] font-semibold text-teal-200 bg-teal-900/80 px-2.5 py-1 rounded-lg border border-teal-700/60";
+        if (text) text.textContent = "Siap Offline";
+      } else {
+        badge.className = "inline-flex items-center gap-1.5 text-[11px] font-bold text-amber-200 bg-amber-900/90 px-2.5 py-1 rounded-lg border border-amber-600 shadow-sm";
+        if (text) text.innerHTML = '<i class="ph-bold ph-wifi-slash text-xs"></i> Mode Offline';
+      }
+    }
+    window.addEventListener('online', updateNetworkStatus);
+    window.addEventListener('offline', updateNetworkStatus);
+    updateNetworkStatus();
+  </script>
+</body>
+</html>
